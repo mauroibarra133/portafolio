@@ -1,0 +1,136 @@
+:root{
+    --fg-hero-1: #000;
+    --fg-hero-name: rgba(22, 20, 123, 0.85);
+    --fg-hero-subname: #0F2E51;
+    --hero--button-1: rgba(228, 227, 227, 0.62);
+    --hero--button-1-fg: rgba(22, 20, 123, 0.85);
+    --hero--button-2: rgba(81, 79, 191, 0.85);
+    --hero--button-2-fg: #fff
+
+}
+
+.hero-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 2rem 0;
+}
+
+/* Settings */
+.hero-settings{
+    display: flex;
+    justify-content: flex-end;
+}
+.hero-settings-icon--container{
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    padding: 0 1rem;
+}
+.hero-settings-icon{
+    font-size: 1.4rem;
+}
+
+.hero-settings-icon.language{
+    color: var(--fg-hero-subname);
+}
+.hero-settings-icon.color{
+    color: var(--hero--button-1-fg);
+}
+
+/* Description */
+.hero-description{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    margin-top: 3rem;
+}
+
+.hero-description__presentation{
+    display: flex;
+    align-items: center;
+}
+.hero-description__presentation p{
+    font-family: 'Amita', serif;
+    font-size: 1.1rem;
+    color: var(--fg-hero-1);
+    height: fit-content;
+}
+
+.hero-description__name{
+    display: flex;
+    flex-direction: column;
+}
+.hero-description__name--name{
+    font-family: 'Arvo', serif;
+    font-size: 2rem;
+    color: var(--fg-hero-name);
+    font-weight: 400;
+    height: fit-content;
+
+}
+
+.hero-description__name--profession{
+    height: fit-content;
+    font-family: 'Source Serif 4', serif;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 800;
+    color: var(--fg-hero-subname);
+}
+
+.hero-description__text{
+    display: flex;
+    align-items: center;
+    font-family: 'Source Serif 3', serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.3rem;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+/* Buttons */
+.hero-buttons{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 1rem;
+    gap: 1.5rem;
+
+}
+
+.hero-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 1.9px 0px rgba(0, 0, 0, 0.25);
+    max-width: 200px;
+}
+.hero-button p{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: .9rem;
+    font-style: normal;
+    font-weight: 900;
+}
+.hero-button-contact{
+    background: var(--hero--button-1);
+    color: var(--hero--button-1-fg);
+}
+
+.hero-button-resume{
+    background-color:var(--hero--button-2);
+    color: var(--hero--button-2-fg);
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.hero-button-resume--icon, .hero-button-resume p{
+    width: fit-content;
+}

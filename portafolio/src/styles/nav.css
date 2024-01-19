@@ -1,0 +1,40 @@
+
+:root{
+    --bg-nav: #E3E3E3;
+    --size-icons: 1.4rem;
+    --font-nav:  'Montserrat';
+    --fg-nav: #000000  
+  }
+
+/*
+NAV
+*/
+
+.nav{
+    height: 60px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-nav);
+  }
+  
+.nav-icon{
+    color: var(--fg-nav);
+    width: 30px;
+    font-size: var(--size-icons);
+}
+  
+.nav-icon-container, .nav-menu{
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon-container{
+    justify-content: start;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: end;
+}
