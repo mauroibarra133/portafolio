@@ -1,3 +1,21 @@
+:root{
+  --bg-nav: #E3E3E3;
+  --bg-nav-2: #9c9b9b;
+  --size-icons: 1.4rem;
+  --font-nav:  'Montserrat';
+  --fg-nav: #000000 ;
+  --z-nav: 10000;
+  --z-aside: 1000;
+  
+  --fg-hero-1: #000;
+  --fg-hero-name: rgba(22, 20, 123, 0.85);
+  --fg-hero-subname: #0F2E51;
+  --hero--button-1: rgba(228, 227, 227, 0.62);
+  --hero--button-1-fg: rgba(22, 20, 123, 0.85);
+  --hero--button-2: rgba(81, 79, 191, 0.85);
+  --hero--button-2-fg: #fff
+}
+
 *{
   margin: 0;
   padding: 0;

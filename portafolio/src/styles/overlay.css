@@ -10,7 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all .5s ease;
+    transition: all 2s ease;
   }
 .overlay{
   background-color: transparent; /* Fondo semi-transparente */

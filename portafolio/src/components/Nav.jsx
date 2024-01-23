@@ -18,7 +18,27 @@ function Nav({ switchNav, isNavOpen }) {
             onClick={switchNav}
           />
         </div>
-        <aside className={`aside ${isNavOpen ? "opened" : ""}`}>
+        <div className={`nav-list-container`}>
+        <ul className="nav-list">
+          <li className="nav-item">
+            <NavLink>Home</NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink>About Me</NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink>Projects</NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink>Skills</NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink>Contact Me</NavLink>
+          </li>
+        </ul>
+      </div>
+      </div>
+      <aside className={`aside ${isNavOpen ? "opened" : ""}`}>
         <ul className="aside-list">
           <li className="aside-item">
             <NavLink>Home</NavLink>
@@ -37,7 +57,6 @@ function Nav({ switchNav, isNavOpen }) {
           </li>
         </ul>
       </aside>
-      </div>
     </div>
   );
 }

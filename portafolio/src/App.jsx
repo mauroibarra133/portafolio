@@ -33,7 +33,7 @@ function App() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []); // La dependencia vacía asegura que el efecto solo se ejecute una vez al montar el componente
+  }, ); // La dependencia vacía asegura que el efecto solo se ejecute una vez al montar el componente
 
 
   return (
