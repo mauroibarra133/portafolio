@@ -1,21 +1,33 @@
 
 :root{
     --bg-nav: #E3E3E3;
+    --bg-nav-2: #9c9b9b;
     --size-icons: 1.4rem;
     --font-nav:  'Montserrat';
-    --fg-nav: #000000  
+    --fg-nav: #000000 ;
+    --z-nav: 10000;
+    --z-aside: 1000;
+    --fg-color: rgba(22, 20, 123, 0.85);
+
   }
 
 /*
 NAV
 */
-
 .nav{
+    z-index: 100;
+    height: 60px;
+    z-index: 100;
+    background-color: var(--bg-nav);
+}
+.nav-container{
     height: 60px;
     padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 100;
     background-color: var(--bg-nav);
   }
   
@@ -23,6 +35,7 @@ NAV
     color: var(--fg-nav);
     width: 30px;
     font-size: var(--size-icons);
+    z-index: 100;
 }
   
 .nav-icon-container, .nav-menu{
@@ -37,4 +50,101 @@ NAV
 .nav-menu{
     display: flex;
     justify-content: end;
+}
+.nav-menu svg{
+    transition: all .5s ;
+}
+.nav-menu svg:hover{
+    cursor: pointer;
+    color: rgb(167, 167, 167);
+}
+
+
+/* ASIDE */
+
+.aside{
+    width: 100%;
+    position: absolute;
+    background-color: #e1e1e1;
+    box-shadow: 0px 4px 1.9px 0px rgba(0, 0, 0, 0.25);
+    transition: backgroundColor  .5s ease;
+    transition: transform  .5s ease;
+    transform: translateY(-70%);
+    z-index: var(--z-nav);
+
+}
+.aside.opened{
+    transform: translateY(60%);
+
+}
+.aside-item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--fg-nav);
+}
+.aside-item{
+    border-bottom: 1px solid #c0c0c0;
+    padding: .7rem;
+    list-style: none;
+}
+
+.aside-item:hover{
+    background-color:var(--fg-color);
+}
+
+.aside-item:hover a{
+    color: #fff;
+}
+
+
+/* Media Queries */
+@media only  screen and (min-width:768px){
+    .nav{
+        height: 70px;
+    }
+    .nav-container{
+        height: 100%;
+        padding: 1rem 2rem;
+
+    }
+
+    .nav-menu{
+        display: none; /*Ocultar el boton*/
+    }
+
+    .aside{
+        transform: translateY(0);
+        position: relative;
+        box-shadow: none;
+        background-color: transparent;
+        z-index: 10;
+        }
+
+    .aside-list{
+        background-color: var(--bg-nav);
+        display: flex;
+        
+    }
+    .aside-item{
+        list-style: none;
+        border: none;
+        padding: .5rem 0 ;
+    }
+
+    .aside-item:hover{
+        background-color: transparent;
+        border-bottom: 2px solid var(--fg-color);
+    }
+    .aside-item:hover a{
+        color: var(--fg-color);
+    }
+
+    section{
+        padding: 4rem 2rem;
+    }
+    .nav-icon{
+        font-size: 1.8rem;
+    }
 }
