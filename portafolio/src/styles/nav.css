@@ -5,7 +5,14 @@ NAV
 */
 .nav{
     height: 60px;
+}
+.nav.light, .nav-container.light{
     background-color: var(--gray-1);
+
+}
+.nav.dark, .nav-container.dark{
+    background-color: var(--dblue-5);
+
 }
 .nav-container{
     height: 60px;
@@ -15,15 +22,19 @@ NAV
     justify-content: center;
     position: relative; 
     z-index: 100;
-    background-color: var(--gray-1);
     z-index: var(--z-nav);
-
   }
   
 .nav-icon{
-    color: var(--black-1);
     width: 30px;
     font-size: var(--size-icons);
+}
+.nav-icon.light{
+    color: var(--black-1);
+}
+.nav-icon.dark{
+    color: var(--dwhite-1);
+
 }
   
 .nav-icon-container, .nav-menu{
@@ -44,9 +55,13 @@ NAV
 }
 .nav-menu svg:hover{
     cursor: pointer;
+}
+.nav-menu svg.light:hover{
     color: rgb(167, 167, 167);
 }
-
+.nav-menu svg.dark:hover{
+    color: var(--dgray-1);
+}
 /* Nav Interno > 768px */
 
 .nav-list-container{

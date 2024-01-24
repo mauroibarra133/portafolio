@@ -2,11 +2,18 @@
   --gray-1: #E3E3E3;
   --black-1: #000000 ;
   --blue-1: rgba(228, 227, 227, 0.62);
-  --blue-2: rgba(81, 79, 191, 0.85);
-  --blue-3: rgba(22, 20, 123, 0.85);
-  --blue-4: rgba(22, 20, 123, 0.85);
+  --blue-2: #514fbfd9;
+  --blue-3: #16147bd9;
+  --blue-4: #16147bd9;
   --blue-5: #0F2E51;
   --white-1: #fff;
+
+  /* Dark Mode Colors */
+  --dblue-5: #0F2E51;
+  --dwhite-1: #fff;
+  --dgray-1: #E3E3E3;
+
+
 
   --size-icons: 1.4rem;
   

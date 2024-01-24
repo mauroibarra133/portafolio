@@ -1,26 +1,47 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faDownload,
-  faLanguage,
-  faCircleHalfStroke,
-} from "@fortawesome/free-solid-svg-icons";
+import { faDownload, faLanguage } from "@fortawesome/free-solid-svg-icons";
 import "../styles/hero.css";
+import ReactSwitch from "react-switch";
+import { useState } from "react";
+import { useThemeContext } from "../context/ThemeContext";
 
 function Hero() {
+  const [checked, setChecked] = useState(false);
+  const { setContextTheme } = useThemeContext();
+
+  function handleSwitch(nextChecked) {
+    setContextTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+    setChecked(nextChecked);
+  }
+  
+
   return (
     <section>
       <div className="hero-container">
         <div className="hero-settings">
           <div className="hero-settings-icon--container">
-            <FontAwesomeIcon icon={faLanguage} className="hero-settings-icon language" />
+            <FontAwesomeIcon
+              icon={faLanguage}
+              className="hero-settings-icon language"
+            />
           </div>
           <div className="hero-settings-icon--container">
-          <FontAwesomeIcon
-            icon={faCircleHalfStroke}
-            className="hero-settings-icon color"
-          />
+            <ReactSwitch
+              onChange={handleSwitch}
+              checked={checked}
+              onColor="#142986"
+              onHandleColor="#2693e6"
+              handleDiameter={30}
+              uncheckedIcon={false}
+              checkedIcon={false}
+              boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
+              activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
+              height={20}
+              width={48}
+              className="react-switch"
+              id="material-switch"
+            />
           </div>
-
         </div>
 
         <div className="hero-description">
