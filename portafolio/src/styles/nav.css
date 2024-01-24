@@ -5,7 +5,7 @@ NAV
 */
 .nav{
     height: 60px;
-    background-color: var(--bg-nav);
+    background-color: var(--gray-1);
 }
 .nav-container{
     height: 60px;
@@ -15,13 +15,13 @@ NAV
     justify-content: center;
     position: relative; 
     z-index: 100;
-    background-color: var(--bg-nav);
+    background-color: var(--gray-1);
     z-index: var(--z-nav);
 
   }
   
 .nav-icon{
-    color: var(--fg-nav);
+    color: var(--black-1);
     width: 30px;
     font-size: var(--size-icons);
 }
@@ -67,14 +67,14 @@ NAV
     text-decoration: none;
     display: flex;
     justify-content: center;
-    color: var(--fg-hero-subname);
+    color: var(--blue-5);
     font-weight: 500;
     padding: .5rem;
 
 }
 .nav-item:hover{
     background-color: transparent;
-    border-bottom: 2px solid var(--fg-hero-name);
+    border-bottom: 2px solid var(--blue-3);
 }
 .nav-item:hover a{
     color: var(--fg-color);
@@ -102,7 +102,8 @@ NAV
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: var(--fg-nav);
+    color: var(--black-1);
+    font-family: var(--font-monserrat);
 }
 .aside-item{
     border-bottom: 1px solid #c0c0c0;
@@ -111,11 +112,11 @@ NAV
 }
 
 .aside-item:hover{
-    background-color:var(--fg-color);
+    background-color:var(--blue-4);
 }
 
 .aside-item:hover a{
-    color: #fff;
+    color: var(--white-1);
 }
 
 

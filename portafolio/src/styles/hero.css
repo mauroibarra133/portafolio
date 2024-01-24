@@ -1,7 +1,4 @@
-:root{
 
-
-}
 
 .hero-container{
     display: flex;
@@ -27,10 +24,10 @@
 }
 
 .hero-settings-icon.language{
-    color: var(--fg-hero-subname);
+    color: var(--blue-5);
 }
 .hero-settings-icon.color{
-    color: var(--hero--button-1-fg);
+    color: var(--blue-4);
 }
 
 /* Description */
@@ -46,9 +43,9 @@
     align-items: center;
 }
 .hero-description__presentation p{
-    font-family: 'Amita', serif;
+    font-family: var(--font-cursive);
     font-size: 1.1rem;
-    color: var(--fg-hero-1);
+    color: var(--black-1);
     height: fit-content;
 }
 
@@ -57,9 +54,9 @@
     flex-direction: column;
 }
 .hero-description__name--name{
-    font-family: 'Arvo', serif;
+    font-family: var(--font-arvo-serif);
     font-size: 2rem;
-    color: var(--fg-hero-name);
+    color: var(--blue-3);
     font-weight: 400;
     height: fit-content;
 
@@ -67,17 +64,17 @@
 
 .hero-description__name--profession{
     height: fit-content;
-    font-family: 'Source Serif 4', serif;
+    font-family: var(--font-serif-4);
     font-size: 1rem;
     font-style: italic;
     font-weight: 800;
-    color: var(--fg-hero-subname);
+    color: var(--blue-5);
 }
 
 .hero-description__text{
     display: flex;
     align-items: center;
-    font-family: 'Source Serif 3', serif;
+    font-family: var(--font-serif-3);
     font-size: 1rem;
     font-style: normal;
     font-weight: 500;
@@ -109,19 +106,19 @@
 }
 .hero-button p{
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-roboto);
     font-size: .9rem;
     font-style: normal;
     font-weight: 900;
 }
 .hero-button-contact{
-    background: var(--hero--button-1);
-    color: var(--hero--button-1-fg);
+    background: var(--blue-1);
+    color: var(--blue-4);
 }
 
 .hero-button-resume{
-    background-color:var(--hero--button-2);
-    color: var(--hero--button-2-fg);
+    background-color:var(--blue-2);
+    color: var(--white-1);
     display: flex;
     justify-content: center;
     gap: 1rem;
