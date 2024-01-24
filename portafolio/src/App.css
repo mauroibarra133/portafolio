@@ -1,5 +1,6 @@
 :root{
   --gray-1: #E3E3E3;
+  --gray-2: #E1e1E1;
   --black-1: #000000 ;
   --blue-1: rgba(228, 227, 227, 0.62);
   --blue-2: #514fbfd9;
@@ -7,11 +8,17 @@
   --blue-4: #16147bd9;
   --blue-5: #0F2E51;
   --white-1: #fff;
+  --white-2: #f3f3f3f2;
 
   /* Dark Mode Colors */
-  --dblue-5: #0F2E51;
+  --dblue-1: rgba(228, 227, 227, 0.62);
+  --dblue-4: #0A223D;
+  --dblue-5: rgb(15, 46, 81);
+  --dgreen-1: rgba(66, 108, 91, 0.85);
+  --dgreen-2: rgba(159, 225, 197, 0.85);
   --dwhite-1: #fff;
   --dgray-1: #E3E3E3;
+
 
 
 

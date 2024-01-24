@@ -7,7 +7,6 @@ import { useThemeContext } from "../context/ThemeContext.jsx";
 // eslint-disable-next-line react/prop-types
 function Nav({ switchNav, isNavOpen }) {
   const { contextTheme } = useThemeContext();
-console.log(contextTheme);
   return (
     <div className={`nav ${contextTheme}`}>
       <div className={`nav-container ${contextTheme}`}>
@@ -23,39 +22,39 @@ console.log(contextTheme);
         </div>
         <div className={`nav-list-container`}>
           <ul className="nav-list">
-            <li className="nav-item">
-              <NavLink>Home</NavLink>
+            <li className={`nav-item ${contextTheme}`}>
+              <NavLink >Home</NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink>About Me</NavLink>
+            <li className={`nav-item ${contextTheme}`}>
+              <NavLink >About Me</NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink>Projects</NavLink>
+            <li className={`nav-item ${contextTheme}`}>
+              <NavLink >Projects</NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink>Skills</NavLink>
+            <li className={`nav-item ${contextTheme}`}>
+              <NavLink >Skills</NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink>Contact Me</NavLink>
+            <li className={`nav-item ${contextTheme}`}>
+              <NavLink >Contact Me</NavLink>
             </li>
           </ul>
         </div>
       </div>
-      <aside className={`aside ${isNavOpen ? "opened" : ""}`}>
+      <aside className={`aside ${isNavOpen ? "opened" : ""} ${contextTheme}`}>
         <ul className="aside-list">
-          <li className="aside-item">
+          <li className={`aside-item ${contextTheme}`}>
             <NavLink>Home</NavLink>
           </li>
-          <li className="aside-item">
+          <li className={`aside-item ${contextTheme}`}>
             <NavLink>About Me</NavLink>
           </li>
-          <li className="aside-item">
+          <li className={`aside-item ${contextTheme}`}>
             <NavLink>Projects</NavLink>
           </li>
-          <li className="aside-item">
+          <li className={`aside-item ${contextTheme}`}>
             <NavLink>Skills</NavLink>
           </li>
-          <li className="aside-item">
+          <li className={`aside-item ${contextTheme}`}>
             <NavLink>Contact Me</NavLink>
           </li>
         </ul>

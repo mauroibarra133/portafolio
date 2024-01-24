@@ -1,20 +1,24 @@
 
 .overlay.opened {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
-    z-index:10; /* Asegura que el overlay esté por encima de otros elementos */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 1s ease;
-  }
-.overlay{
-  background-color: transparent; /* Fondo semi-transparente */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10; /* Asegura que el overlay esté por encima de otros elementos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease;
+  background-color: #000;
 }
+
+  .overlay.opened.light{
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  }
+  .overlay.opened.dark{
+    background-color: rgba(0, 0, 0, 0.8); 
+  }
 
   .overlay-content {
     background-color: #fff;
