@@ -3,15 +3,21 @@ import { faBriefcase, faBars } from "@fortawesome/free-solid-svg-icons";
 import "../styles/nav.css";
 import { NavLink } from "react-router-dom";
 import { useThemeContext } from "../context/ThemeContext.jsx";
+import { useLanguageContext } from "../context/LanguageContext.jsx";
 
 // eslint-disable-next-line react/prop-types
 function Nav({ switchNav, isNavOpen }) {
   const { contextTheme } = useThemeContext();
+  const { texts } = useLanguageContext();
+
   return (
     <div className={`nav ${contextTheme}`}>
       <div className={`nav-container ${contextTheme}`}>
         <div className="nav-icon-container">
-          <FontAwesomeIcon icon={faBriefcase} className={`nav-icon ${contextTheme}`} />
+          <FontAwesomeIcon
+            icon={faBriefcase}
+            className={`nav-icon ${contextTheme}`}
+          />
         </div>
         <div className="nav-menu">
           <FontAwesomeIcon
@@ -23,19 +29,19 @@ function Nav({ switchNav, isNavOpen }) {
         <div className={`nav-list-container`}>
           <ul className="nav-list">
             <li className={`nav-item ${contextTheme}`}>
-              <NavLink >Home</NavLink>
+              <NavLink>{texts.navItem1}</NavLink>
             </li>
             <li className={`nav-item ${contextTheme}`}>
-              <NavLink >About Me</NavLink>
+              <NavLink>{texts.navItem2}</NavLink>
             </li>
             <li className={`nav-item ${contextTheme}`}>
-              <NavLink >Projects</NavLink>
+              <NavLink>{texts.navItem3}</NavLink>
             </li>
             <li className={`nav-item ${contextTheme}`}>
-              <NavLink >Skills</NavLink>
+              <NavLink>{texts.navItem4}</NavLink>
             </li>
             <li className={`nav-item ${contextTheme}`}>
-              <NavLink >Contact Me</NavLink>
+              <NavLink>{texts.navItem5}</NavLink>
             </li>
           </ul>
         </div>
@@ -43,19 +49,19 @@ function Nav({ switchNav, isNavOpen }) {
       <aside className={`aside ${isNavOpen ? "opened" : ""} ${contextTheme}`}>
         <ul className="aside-list">
           <li className={`aside-item ${contextTheme}`}>
-            <NavLink>Home</NavLink>
+            <NavLink>{texts.navItem1}</NavLink>
           </li>
           <li className={`aside-item ${contextTheme}`}>
-            <NavLink>About Me</NavLink>
+            <NavLink>{texts.navItem2}</NavLink>
           </li>
           <li className={`aside-item ${contextTheme}`}>
-            <NavLink>Projects</NavLink>
+            <NavLink>{texts.navItem3}</NavLink>
           </li>
           <li className={`aside-item ${contextTheme}`}>
-            <NavLink>Skills</NavLink>
+            <NavLink>{texts.navItem4}</NavLink>
           </li>
           <li className={`aside-item ${contextTheme}`}>
-            <NavLink>Contact Me</NavLink>
+            <NavLink>{texts.navItem5}</NavLink>
           </li>
         </ul>
       </aside>

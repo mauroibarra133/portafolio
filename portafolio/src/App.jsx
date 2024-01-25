@@ -8,6 +8,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 function App() {
+
+  
   const [isNavOpen, setIsNavOpen] = useState(false);
   const { contextTheme } = useThemeContext();
 

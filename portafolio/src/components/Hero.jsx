@@ -1,13 +1,17 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload, faLanguage } from "@fortawesome/free-solid-svg-icons";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import "../styles/hero.css";
 import ReactSwitch from "react-switch";
 import { useState } from "react";
 import { useThemeContext } from "../context/ThemeContext";
+import { useLanguageContext } from "../context/LanguageContext";
 
 function Hero() {
-  const [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useState(
+    localStorage.getItem("selectedTheme") === "dark" ? true : false
+  );
   const { contextTheme, setContextTheme } = useThemeContext();
+  const { texts, handleLanguage } = useLanguageContext();
 
   function handleSwitch(nextChecked) {
     setContextTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
@@ -19,10 +23,22 @@ function Hero() {
       <div className="hero-container">
         <div className="hero-settings">
           <div className="hero-settings-icon--container">
-            <FontAwesomeIcon
-              icon={faLanguage}
+            <p
               className={`hero-settings-icon language ${contextTheme}`}
-            />
+              onClick={handleLanguage}
+              defaultValue={"ES"}
+            >
+              {"ES"}
+            </p>
+          </div>
+          <div className="hero-settings-icon--container">
+            <p
+              className={`hero-settings-icon language ${contextTheme}`}
+              onClick={handleLanguage}
+              defaultValue={"EN"}
+            >
+              {"EN"}
+            </p>
           </div>
           <div className="hero-settings-icon--container">
             <ReactSwitch
@@ -45,7 +61,7 @@ function Hero() {
 
         <div className="hero-description">
           <div className={`hero-description__presentation ${contextTheme}`}>
-            <p>{"Hi I'm"}</p>
+            <p>{texts.heroDescription}</p>
           </div>
           <div className="hero-description__name">
             <h1 className={`hero-description__name--name ${contextTheme}`}>
@@ -58,24 +74,20 @@ function Hero() {
             </h2>
           </div>
           <div className={`hero-description__text ${contextTheme}`}>
-            <p>
-              {
-                "I'm a flexible full-stack developer with a focus on making technology user-friendly.Bringing a lively and team-oriented approach, I'm here to contribute positively to projects and teams."
-              }
-            </p>
+            <p>{texts.heroText}</p>
           </div>
         </div>
 
         <div className="hero-buttons">
           <div className={`hero-button hero-button-contact ${contextTheme}`}>
-            <p>{"Contact Me"}</p>
+            <p>{texts.heroButtonContactame}</p>
           </div>
           <div className={`hero-button hero-button-resume ${contextTheme}`}>
             <FontAwesomeIcon
               icon={faDownload}
               className={`hero-button-resume--icon ${contextTheme}`}
             />
-            <p>{"Resume"}</p>
+            <p>{texts.heroButtonCv}</p>
           </div>
         </div>
       </div>

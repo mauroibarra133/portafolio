@@ -13,6 +13,7 @@
 .hero-settings{
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 .hero-settings-icon--container{
     display: flex;
@@ -23,10 +24,19 @@
 .hero-settings-icon{
     font-size: 1.4rem;
 }
-
-.hero-settings-icon.language.light{
-    color: var(--blue-5);
+.hero-settings-icon.language{
+    font-family: var(--font-arvo-serif);
+    font-weight: 400;
 }
+.hero-settings-icon.language.light{
+    color: var(--gray-3);
+    transition: all .5s ease;
+}
+.hero-settings-icon.language:hover{
+    cursor: pointer;
+    filter: brightness(.7);
+}
+
 .hero-settings-icon.language.dark{
     color: var(--white-2);
 }
