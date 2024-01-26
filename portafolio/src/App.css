@@ -1,13 +1,15 @@
 :root{
   --gray-1: #E3E3E3;
   --gray-2: #E1e1E1;
-  --gray-3: rgb(136, 136, 136);
+  --gray-3: #888888;
+  --gray-4: #565656;
   --black-1: #000000 ;
   --blue-1: rgba(228, 227, 227, 0.62);
   --blue-2: #514fbfd9;
   --blue-3: #16147bd9;
   --blue-4: #16147bd9;
   --blue-5: #0F2E51;
+  
   --white-1: #fff;
   --white-2: #f3f3f3f2;
 
@@ -16,8 +18,9 @@
   --dblue-4: #0A223D;
   --dblue-5: rgb(15, 46, 81);
   --dgreen-1: rgba(66, 108, 91, 0.85);
-  --dgreen-2: rgba(159, 225, 197, 0.85);
+  --dgreen-2: #9fe1c5d9;
   --dwhite-1: #fff;
+  --dwhite-2: #d7d7d7;
   --dgray-1: #E3E3E3;
 
 
@@ -42,7 +45,6 @@
   margin: 0;
   padding: 0;
   width: 100%;
-  height: fit-content;
   box-sizing: border-box;
 }
 
@@ -55,4 +57,28 @@ section{
 
 p{
   height: fit-content;
+}
+
+.section-title{
+  font-family: var(--font-roboto);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-title.light{
+  color: var(--blue-2);
+}
+.section-title.dark{
+  color: var(--dgreen-2);
+}
+.section-title h2{
+  text-align: center;
+  width: fit-content;
+  padding-bottom: .2rem;
+}
+.section-title h2.light{
+  border-bottom: 2px solid var(--blue-2);
+}
+.section-title h2.dark{
+  border-bottom: 2px solid var(--dgreen-2);
 }

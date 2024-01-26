@@ -1,12 +1,11 @@
 import "./App.css";
 import Nav from "./components/Nav";
-import Hero from "./components/Hero";
 import Overlay from "./components/Overlay";
 import { useThemeContext } from "./context/ThemeContext";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
-
+import Page from "./components/Page";
 function App() {
 
   
@@ -45,7 +44,7 @@ function App() {
         <Overlay closeNav={closeNav} isNavOpen={isNavOpen}>
           <div className="body">
             <Routes>
-              <Route path="/" element={<Hero />} />
+              <Route path="/" element={<Page />} />
             </Routes>
           </div>
         </Overlay>

@@ -5,6 +5,9 @@ NAV
 */
 .nav{
     height: 60px;
+    position: sticky;
+    top: 0;
+    z-index: var(--z-nav);
 }
 .nav.light, .nav-container.light{
     background-color: var(--gray-1);
@@ -164,6 +167,7 @@ NAV
 @media only  screen and (min-width:768px){
     .nav{
         height: 70px;
+        position: static;
     }
     .nav-container{
         height: 100%;
