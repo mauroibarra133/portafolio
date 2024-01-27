@@ -12,12 +12,16 @@ export const LanguageContextProvider = ({ children }) => {
       navItem4: "Tecnologias",
       navItem5: "Contactame",
       heroDescription: "Yo soy",
-      heroText:`Soy un desarrollador full-stack flexible centrado en 
+      heroText: `Soy un desarrollador full-stack flexible centrado en 
       hacer que la tecnología sea fácil de usar. Con un enfoque animado 
       y orientado al equipo, estoy aquí para contribuir positivamente a proyectos y equipos.`,
-      heroButtonContactame: 'Contáctame',
-      heroButtonCv: 'Ver CV'
-
+      heroButtonContactame: "Contáctame",
+      heroButtonCv: "Ver CV",
+      aboutNavItem1: "Experiencia",
+      aboutNavItem2: "Educacion",
+      aboutNavItem3: "Idiomas",
+      jobName1: "DESARROLLADOR PHP",
+      jobName2: "SOPORTE TECNICO",
     },
     en: {
       navItem1: "Home",
@@ -26,26 +30,28 @@ export const LanguageContextProvider = ({ children }) => {
       navItem4: "Skills",
       navItem5: "Contact Me",
       heroDescription: "Hi, I'm",
-      heroText:`I'm a flexible full-stack developer with a focus on making technology
+      heroText: `I'm a flexible full-stack developer with a focus on making technology
        user-friendly.Bringing a lively and team-oriented approach,
         I'm here to contribute positively to projects and teams.`,
-      heroButtonContactame: 'Contact Me',
-      heroButtonCv: 'Resume'
-
-
+      heroButtonContactame: "Contact Me",
+      heroButtonCv: "Resume",
+      aboutNavItem1: "Experience",
+      aboutNavItem2: "Education",
+      aboutNavItem3: "Languages",
+      jobName1: "PHP DEVELOPER",
+      jobName2: "TECHNICAL SUPPORT",
     },
   };
   const initialLanguage = "en";
   const [language, setLanguage] = useState(
     localStorage.getItem("selectedLanguage") || initialLanguage
-    );
-    const [texts, setTexts] = useState(translations[language]);
+  );
+  const [texts, setTexts] = useState(translations[language]);
 
   useEffect(() => {
     // Guardar la elección del idioma en el localStorage
     localStorage.setItem("selectedLanguage", language);
   }, [language]);
-
 
   const handleLanguage = (e) => {
     if (e.target.innerHTML === "ES") {

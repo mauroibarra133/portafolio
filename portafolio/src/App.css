@@ -3,25 +3,30 @@
   --gray-2: #E1e1E1;
   --gray-3: #888888;
   --gray-4: #565656;
+  --gray-5: rgba(206, 206, 206, 0.8);
   --black-1: #000000 ;
   --blue-1: rgba(228, 227, 227, 0.62);
+
   --blue-2: #514fbfd9;
   --blue-3: #16147bd9;
   --blue-4: #16147bd9;
   --blue-5: #0F2E51;
-  
+  --violet-1: rgba(81, 79, 191, 0.31);
   --white-1: #fff;
   --white-2: #f3f3f3f2;
 
   /* Dark Mode Colors */
+  --dblack-1 : #242629;
   --dblue-1: rgba(228, 227, 227, 0.62);
   --dblue-4: #0A223D;
   --dblue-5: rgb(15, 46, 81);
   --dgreen-1: rgba(66, 108, 91, 0.85);
   --dgreen-2: #9fe1c5d9;
+  --dgreen-3: #374151;
   --dwhite-1: #fff;
   --dwhite-2: #d7d7d7;
   --dgray-1: #E3E3E3;
+  --dgray-2: #586574;
 
 
 
@@ -34,6 +39,7 @@
   --font-serif-4: 'Source Serif 4', serif;
   --font-serif-3: 'Source Serif 3', serif;
   --font-roboto: 'Roboto', sans-serif;
+  --font-itim: 'Itim', cursive;
 
   --z-nav: 10000;
   --z-aside: 1000;
