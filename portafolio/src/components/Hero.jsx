@@ -19,7 +19,7 @@ function Hero() {
   }
 
   return (
-    <section>
+    <section id="home">
       <div className="hero-container">
         <div className="hero-settings">
           <div className="hero-settings-icon--container">

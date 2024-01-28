@@ -9,6 +9,8 @@ import "../styles/aboutme.css";
 import { useState } from "react";
 import { useLanguageContext } from "../context/LanguageContext";
 import JobTable from "./Table/JobTable.jsx";
+import EducationTable from "./Table/EducationTable.jsx";
+import LanguageTable from "./Table/LanguageTable.jsx";
 
 function AboutMe() {
   const { contextTheme } = useThemeContext();
@@ -24,7 +26,7 @@ function AboutMe() {
   }
 
   return (
-    <section>
+    <section id="aboutme">
       <div className="about-container">
         <div className={`about-title section-title ${contextTheme}`}>
           <h2 className={contextTheme}>{"About Me"}</h2>
@@ -78,6 +80,8 @@ function AboutMe() {
         </div>
         <div className="about-table">
             {activeTag === 1 && <JobTable />}
+            {activeTag === 2 && <EducationTable />}
+            {activeTag === 3 && <LanguageTable />}
             </div>
       </div>
     </section>

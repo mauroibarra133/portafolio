@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: start;
     padding: 2rem 0;
+    padding-bottom: 0;
     z-index: 1;
 }
 

@@ -29,19 +29,19 @@ function Nav({ switchNav, isNavOpen }) {
         <div className={`nav-list-container`}>
           <ul className="nav-list">
             <li className={`nav-item ${contextTheme}`}>
-              <NavLink>{texts.navItem1}</NavLink>
+              <NavLink to={'#home'}>{texts.navItemHome}</NavLink>
             </li>
             <li className={`nav-item ${contextTheme}`}>
-              <NavLink>{texts.navItem2}</NavLink>
+              <NavLink>{texts.navItemAbout}</NavLink>
             </li>
             <li className={`nav-item ${contextTheme}`}>
-              <NavLink>{texts.navItem3}</NavLink>
+              <NavLink>{texts.navItemProjects}</NavLink>
             </li>
             <li className={`nav-item ${contextTheme}`}>
-              <NavLink>{texts.navItem4}</NavLink>
+              <NavLink>{texts.navItemSkills}</NavLink>
             </li>
             <li className={`nav-item ${contextTheme}`}>
-              <NavLink>{texts.navItem5}</NavLink>
+              <NavLink>{texts.navItemContact}</NavLink>
             </li>
           </ul>
         </div>
@@ -49,19 +49,19 @@ function Nav({ switchNav, isNavOpen }) {
       <aside className={`aside ${isNavOpen ? "opened" : ""} ${contextTheme}`}>
         <ul className="aside-list">
           <li className={`aside-item ${contextTheme}`}>
-            <NavLink>{texts.navItem1}</NavLink>
+            <NavLink to={'/#home'} spy smooth>{texts.navItemHome}</NavLink>
           </li>
           <li className={`aside-item ${contextTheme}`}>
-            <NavLink>{texts.navItem2}</NavLink>
+            <NavLink to={'/#home'} spy smooth>{texts.navItemAbout}</NavLink>
           </li>
           <li className={`aside-item ${contextTheme}`}>
-            <NavLink>{texts.navItem3}</NavLink>
+            <NavLink>{texts.navItemProjects}</NavLink>
           </li>
           <li className={`aside-item ${contextTheme}`}>
-            <NavLink>{texts.navItem4}</NavLink>
+            <NavLink>{texts.navItemSkills}</NavLink>
           </li>
           <li className={`aside-item ${contextTheme}`}>
-            <NavLink>{texts.navItem5}</NavLink>
+            <NavLink>{texts.navItemContact}</NavLink>
           </li>
         </ul>
       </aside>

@@ -6,11 +6,11 @@ export const LanguageContext = createContext();
 export const LanguageContextProvider = ({ children }) => {
   const translations = {
     es: {
-      navItem1: "Inicio",
-      navItem2: "Sobre Mi",
-      navItem3: "Proyectos",
-      navItem4: "Tecnologias",
-      navItem5: "Contactame",
+      navItemHome: "Inicio",
+      navItemAbout: "Sobre Mi",
+      navItemProjects: "Proyectos",
+      navItemSkills: "Tecnologias",
+      navItemContact: "Contactame",
       heroDescription: "Yo soy",
       heroText: `Soy un desarrollador full-stack flexible centrado en 
       hacer que la tecnología sea fácil de usar. Con un enfoque animado 
@@ -22,13 +22,23 @@ export const LanguageContextProvider = ({ children }) => {
       aboutNavItem3: "Idiomas",
       jobName1: "DESARROLLADOR PHP",
       jobName2: "SOPORTE TECNICO",
+      educationHead1: "INSTITUCION",
+      educationHead2: "TITULO",
+      degree1: "INGENIERIA EN SISTEMAS",
+      degree2: "ECONOMIA Y GESTION",
+      languageHead1: "IDIOMA",
+      languageHead2: "NIVEL",
+      language1: "ESPAÑOL",
+      language2: "INGLES",
+      lglLvl1: "NATIVO",
+      lglLvl2: "AVANZADO",
     },
     en: {
-      navItem1: "Home",
-      navItem2: "About Me",
-      navItem3: "Projects",
-      navItem4: "Skills",
-      navItem5: "Contact Me",
+      navItemHome: "Home",
+      navItemAbout: "About Me",
+      navItemProjects: "Projects",
+      navItemSkills: "Skills",
+      navItemContact: "Contact Me",
       heroDescription: "Hi, I'm",
       heroText: `I'm a flexible full-stack developer with a focus on making technology
        user-friendly.Bringing a lively and team-oriented approach,
@@ -40,6 +50,16 @@ export const LanguageContextProvider = ({ children }) => {
       aboutNavItem3: "Languages",
       jobName1: "PHP DEVELOPER",
       jobName2: "TECHNICAL SUPPORT",
+      educationHead1: "SCHOOL",
+      educationHead2: "DEGREE",
+      degree1: "INFORMATION SYSTEMS ENGINEERING",
+      degree2: "ECONOMY AND MANAGMENT",
+      languageHead1: "LANGUAGE",
+      languageHead2: "LEVEL",
+      language1: "SPANISH",
+      language2: "ENGLISH",
+      lglLvl1: "NATIVE",
+      lglLvl2: "ADVANCED",
     },
   };
   const initialLanguage = "en";
