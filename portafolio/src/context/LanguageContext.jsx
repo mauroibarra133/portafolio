@@ -20,6 +20,8 @@ export const LanguageContextProvider = ({ children }) => {
       aboutNavItem1: "Experiencia",
       aboutNavItem2: "Educacion",
       aboutNavItem3: "Idiomas",
+      jobHead1: "EMPRESA",
+      jobHead2: "PUESTO",
       jobName1: "DESARROLLADOR PHP",
       jobName2: "SOPORTE TECNICO",
       educationHead1: "INSTITUCION",
@@ -32,6 +34,11 @@ export const LanguageContextProvider = ({ children }) => {
       language2: "INGLES",
       lglLvl1: "NATIVO",
       lglLvl2: "AVANZADO",
+      project1Name: "Website de Alares",
+      project1Description:
+        "Una web adaptada a un restaurante local que permite realizar pedidos online y administrar tu local.",
+      projectButton1: "Repositorio",
+      projectButton2: "Visitar",
     },
     en: {
       navItemHome: "Home",
@@ -48,6 +55,8 @@ export const LanguageContextProvider = ({ children }) => {
       aboutNavItem1: "Experience",
       aboutNavItem2: "Education",
       aboutNavItem3: "Languages",
+      jobHead1: "COMPANY",
+      jobHead2: "JOB",
       jobName1: "PHP DEVELOPER",
       jobName2: "TECHNICAL SUPPORT",
       educationHead1: "SCHOOL",
@@ -60,6 +69,11 @@ export const LanguageContextProvider = ({ children }) => {
       language2: "ENGLISH",
       lglLvl1: "NATIVE",
       lglLvl2: "ADVANCED",
+      project1Name: "Alares Restaurant Website",
+      project1Description:
+        "A web made to a local restaurant thar enables to make online orders and administrate your local.",
+      projectButton1: "Repository",
+      projectButton2: "Visit",
     },
   };
   const initialLanguage = "en";

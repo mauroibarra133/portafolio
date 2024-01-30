@@ -4,8 +4,17 @@ import { useLanguageContext } from "../../context/LanguageContext";
 function LanguageTable() {
   const { contextTheme } = useThemeContext();
   const { texts } = useLanguageContext();
-  const languageNames = [texts.language1, texts.language2];
-  const levelNames = [texts.lglLvl1, texts.lglLvl2];
+
+  const languages = [
+    {
+      languageName: texts.language1,
+      levelName: texts.lglLvl1,
+    },
+    {
+      languageName: texts.language2,
+      levelName: texts.lglLvl2,
+    },
+  ];
 
   return (
     <table className="small-table">
@@ -20,17 +29,17 @@ function LanguageTable() {
         </tr>
       </thead>
       <tbody className={`table-body ${contextTheme}`}>
-        {Array.from({ length: languageNames.length }, (_, index) => (
+        {languages.map((language, index) => (
           <tr key={index}>
             <td className={`table-body-data ${contextTheme}`}>
               <div className="job-data">
-                <p className={`job-text  ${contextTheme}`}>
-                  {languageNames[index]}
+                <p className={`job-text ${contextTheme}`}>
+                  {language.languageName}
                 </p>
               </div>
             </td>
             <td className={`table-body-data ${contextTheme}`}>
-              <p className={`job-text  ${contextTheme}`}>{levelNames[index]}</p>
+              <p className={`job-text ${contextTheme}`}>{language.levelName}</p>
             </td>
           </tr>
         ))}

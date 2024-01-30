@@ -99,6 +99,7 @@ NAV
 .nav-item:hover{
     background-color: transparent;
     border-bottom: 2px solid var(--blue-3);
+    cursor: pointer;
 }
 
 .nav-item.dark:hover{
@@ -167,7 +168,7 @@ NAV
 @media only  screen and (min-width:768px){
     .nav{
         height: 70px;
-        position: static;
+        position: sticky;
     }
     .nav-container{
         height: 100%;

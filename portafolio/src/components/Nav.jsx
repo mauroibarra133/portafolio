@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBriefcase, faBars } from "@fortawesome/free-solid-svg-icons";
 import "../styles/nav.css";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 import { useThemeContext } from "../context/ThemeContext.jsx";
 import { useLanguageContext } from "../context/LanguageContext.jsx";
 
@@ -29,19 +29,25 @@ function Nav({ switchNav, isNavOpen }) {
         <div className={`nav-list-container`}>
           <ul className="nav-list">
             <li className={`nav-item ${contextTheme}`}>
-              <NavLink to={'#home'}>{texts.navItemHome}</NavLink>
+              <Link to="#home" spy smooth duration={500}>
+                {texts.navItemHome}
+              </Link>
             </li>
             <li className={`nav-item ${contextTheme}`}>
-              <NavLink>{texts.navItemAbout}</NavLink>
+              <Link to="#aboutme" spy smooth duration={500}>
+                {texts.navItemAbout}
+              </Link>
             </li>
             <li className={`nav-item ${contextTheme}`}>
-              <NavLink>{texts.navItemProjects}</NavLink>
+              <Link to="#projects" spy smooth duration={500}>
+                {texts.navItemProjects}
+              </Link>
             </li>
             <li className={`nav-item ${contextTheme}`}>
-              <NavLink>{texts.navItemSkills}</NavLink>
+              <Link>{texts.navItemSkills}</Link>
             </li>
             <li className={`nav-item ${contextTheme}`}>
-              <NavLink>{texts.navItemContact}</NavLink>
+              <Link>{texts.navItemContact}</Link>
             </li>
           </ul>
         </div>
@@ -49,19 +55,32 @@ function Nav({ switchNav, isNavOpen }) {
       <aside className={`aside ${isNavOpen ? "opened" : ""} ${contextTheme}`}>
         <ul className="aside-list">
           <li className={`aside-item ${contextTheme}`}>
-            <NavLink to={'/#home'} spy smooth>{texts.navItemHome}</NavLink>
+            <Link
+              to="#home"
+              spy
+              smooth
+              duration={500}
+              offset={-20}
+              onClick={switchNav}
+            >
+              {texts.navItemHome}
+            </Link>
           </li>
           <li className={`aside-item ${contextTheme}`}>
-            <NavLink to={'/#home'} spy smooth>{texts.navItemAbout}</NavLink>
+            <Link to="#aboutme" spy smooth duration={500} onClick={switchNav}>
+              {texts.navItemAbout}
+            </Link>
           </li>
           <li className={`aside-item ${contextTheme}`}>
-            <NavLink>{texts.navItemProjects}</NavLink>
+            <Link to="#projects" spy smooth duration={500}>
+              {texts.navItemProjects}
+            </Link>
           </li>
           <li className={`aside-item ${contextTheme}`}>
-            <NavLink>{texts.navItemSkills}</NavLink>
+            <Link>{texts.navItemSkills}</Link>
           </li>
           <li className={`aside-item ${contextTheme}`}>
-            <NavLink>{texts.navItemContact}</NavLink>
+            <Link>{texts.navItemContact}</Link>
           </li>
         </ul>
       </aside>

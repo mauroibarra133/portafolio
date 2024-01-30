@@ -6,9 +6,19 @@ import { useLanguageContext } from "../../context/LanguageContext";
 function JobTable() {
   const { contextTheme } = useThemeContext();
   const { texts } = useLanguageContext();
-  const schoolNames = ["UTN CORDOBA", "PBO. JOSE BONORIS"];
-  const degreeNames = [texts.degree1, texts.degree2];
-  const iconCompanies = [utnIcon, bonorisIcon];
+
+  const educations = [
+    {
+      schoolName: "UTN CORDOBA",
+      degreeName: texts.degree1,
+      iconCompany: utnIcon,
+    },
+    {
+      schoolName: "PBO. JOSE BONORIS",
+      degreeName: texts.degree2,
+      iconCompany: bonorisIcon,
+    },
+  ];
 
   return (
     <table>
@@ -23,23 +33,23 @@ function JobTable() {
         </tr>
       </thead>
       <tbody className={`table-body ${contextTheme}`}>
-        {Array.from({ length: schoolNames.length }, (_, index) => (
+        {educations.map((education, index) => (
           <tr key={index}>
             <td className={`table-body-data ${contextTheme}`}>
               <div className="job-data">
                 <img
-                  src={iconCompanies[index]}
-                  alt=""
+                  src={education.iconCompany}
+                  alt={education.schoolName}
                   className="table-job-icon"
                 />
                 <p className={`job-text job-text--padd ${contextTheme}`}>
-                  {schoolNames[index]}
+                  {education.schoolName}
                 </p>
               </div>
             </td>
             <td className={`table-body-data ${contextTheme}`}>
               <p className={`job-text  ${contextTheme}`}>
-                {degreeNames[index]}
+                {education.degreeName}
               </p>
             </td>
           </tr>

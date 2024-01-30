@@ -1,0 +1,105 @@
+
+.proyects-container{
+    padding-top: 2rem;
+}
+.projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+/*
+ PROYECT
+ */
+
+.project{
+    max-width: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem .5rem;
+    border-radius: 12px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.project.dark{
+    background-color: var(--dgreen-3);
+}
+.project.light{
+    background-color: var(--gray-7);
+}
+
+/* Photo */
+.photo{
+    width: 100%;
+    height: 100%;
+    padding: 0 .5rem;
+    border-radius: 12px;
+}
+.photo img{
+    width: 100%;
+    height: 100%;
+}
+
+.project-body{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: .5rem;
+}
+
+/* Title */
+.project-title,.project-description{
+    font-family: var(--font-roboto);
+    font-weight: 500;
+}
+.project-title.light{
+    color: var(---black-1);
+    font-weight: 600;
+}
+.project-title.dark{
+    color: var(--dgray-1);
+    font-weight: 900;
+}
+
+/* Description */
+.project-description{
+    font-size: .9rem;
+    font-weight: 100;
+}
+.project-description.light{
+    color: var(---black-1);
+}
+.project-description.dark{
+    color: var(--dwhite-2);
+}
+/* Buttons */
+.project-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.project-button:first-child.dark{
+    background-color: var(--dgray-1);
+    color: var(--dgreen-1);
+}
+.project-button:nth-child(2).dark{
+    background-color: var(--dgreen-1);
+    color: var(--dwhite-1);
+}
+
+.project-button:first-child.light{
+    background-color: var(--dgray-1);
+    color: var(--blue-2);
+}
+.project-button:nth-child(2).light{
+    background-color: var(--blue-2);
+    color: var(--dwhite-1);
+}

@@ -19,7 +19,7 @@ function Hero() {
   }
 
   return (
-    <section id="home">
+    <section id="home" name="#home">
       <div className="hero-container">
         <div className="hero-settings">
           <div className="hero-settings-icon--container">
@@ -79,10 +79,10 @@ function Hero() {
         </div>
 
         <div className="hero-buttons">
-          <div className={`hero-button hero-button-contact ${contextTheme}`}>
+          <div className={`button hero-button hero-button-contact ${contextTheme}`}>
             <p>{texts.heroButtonContactame}</p>
           </div>
-          <div className={`hero-button hero-button-resume ${contextTheme}`}>
+          <div className={`button hero-button hero-button-resume ${contextTheme}`}>
             <FontAwesomeIcon
               icon={faDownload}
               className={`hero-button-resume--icon ${contextTheme}`}

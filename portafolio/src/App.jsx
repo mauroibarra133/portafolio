@@ -1,14 +1,11 @@
 import "./App.css";
 import Nav from "./components/Nav";
-import Overlay from "./components/Overlay";
 import { useThemeContext } from "./context/ThemeContext";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Page from "./components/Page";
 function App() {
-
-  
   const [isNavOpen, setIsNavOpen] = useState(false);
   const { contextTheme } = useThemeContext();
 
@@ -16,9 +13,6 @@ function App() {
     setIsNavOpen(!isNavOpen);
   };
 
-  const closeNav = () => {
-    setIsNavOpen(false);
-  };
 
   useEffect(() => {
     // Función para manejar el evento de cambio de tamaño de la ventana
@@ -41,13 +35,13 @@ function App() {
     <BrowserRouter>
       <div className={`app-container ${contextTheme}`}>
         <Nav switchNav={switchNav} isNavOpen={isNavOpen} />
-        <Overlay closeNav={closeNav} isNavOpen={isNavOpen}>
-          <div className="body">
-            <Routes>
-              <Route path="/" element={<Page />} />
-            </Routes>
-          </div>
-        </Overlay>
+        {/* <Overlay closeNav={closeNav} isNavOpen={isNavOpen}> */}
+        <div className="body">
+          <Routes>
+            <Route path="/" element={<Page />} />
+          </Routes>
+        </div>
+        {/* </Overlay> */}
       </div>
     </BrowserRouter>
   );

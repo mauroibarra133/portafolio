@@ -26,10 +26,10 @@ function AboutMe() {
   }
 
   return (
-    <section id="aboutme">
-      <div className="about-container">
+    <section id="aboutme" name="#aboutme">
+      <div className="section-container">
         <div className={`about-title section-title ${contextTheme}`}>
-          <h2 className={contextTheme}>{"About Me"}</h2>
+          <h2 className={contextTheme}>{texts.navItemAbout}</h2>
         </div>
         <div className="about-nav">
           <div
@@ -79,10 +79,10 @@ function AboutMe() {
           </div>
         </div>
         <div className="about-table">
-            {activeTag === 1 && <JobTable />}
-            {activeTag === 2 && <EducationTable />}
-            {activeTag === 3 && <LanguageTable />}
-            </div>
+          {activeTag === 1 && <JobTable />}
+          {activeTag === 2 && <EducationTable />}
+          {activeTag === 3 && <LanguageTable />}
+        </div>
       </div>
     </section>
   );
