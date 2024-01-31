@@ -44,7 +44,7 @@ function Nav({ switchNav, isNavOpen }) {
               </Link>
             </li>
             <li className={`nav-item ${contextTheme}`}>
-              <Link>{texts.navItemSkills}</Link>
+              <Link to="#skills">{texts.navItemSkills}</Link>
             </li>
             <li className={`nav-item ${contextTheme}`}>
               <Link>{texts.navItemContact}</Link>
@@ -77,7 +77,7 @@ function Nav({ switchNav, isNavOpen }) {
             </Link>
           </li>
           <li className={`aside-item ${contextTheme}`}>
-            <Link>{texts.navItemSkills}</Link>
+            <Link to="#skills">{texts.navItemSkills}</Link>
           </li>
           <li className={`aside-item ${contextTheme}`}>
             <Link>{texts.navItemContact}</Link>
