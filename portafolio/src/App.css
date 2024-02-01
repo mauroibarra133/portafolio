@@ -42,6 +42,7 @@
   --font-serif-3: 'Source Serif 3', serif;
   --font-roboto: 'Roboto', sans-serif;
   --font-itim: 'Itim', cursive;
+  --font-rubik: 'Rubik', sans-serif;
 
   --z-nav: 10000;
   --z-aside: 1000;
@@ -79,8 +80,10 @@ p{
 .section-title{
   font-family: var(--font-roboto);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1.5rem;
 }
 .section-title.light{
   color: var(--blue-2);

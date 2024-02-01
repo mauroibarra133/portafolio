@@ -44,10 +44,14 @@ function Nav({ switchNav, isNavOpen }) {
               </Link>
             </li>
             <li className={`nav-item ${contextTheme}`}>
-              <Link to="#skills">{texts.navItemSkills}</Link>
+              <Link to="#skills" spy smooth duration={500}>
+                {texts.navItemSkills}
+              </Link>
             </li>
             <li className={`nav-item ${contextTheme}`}>
-              <Link>{texts.navItemContact}</Link>
+              <Link to="#footer" spy smooth duration={500}>
+                {texts.navItemContact}
+              </Link>
             </li>
           </ul>
         </div>
@@ -77,10 +81,14 @@ function Nav({ switchNav, isNavOpen }) {
             </Link>
           </li>
           <li className={`aside-item ${contextTheme}`}>
-            <Link to="#skills">{texts.navItemSkills}</Link>
+            <Link to="#skills" spy smooth duration={500}>
+              {texts.navItemSkills}
+            </Link>
           </li>
           <li className={`aside-item ${contextTheme}`}>
-            <Link>{texts.navItemContact}</Link>
+            <Link to="#footer" spy smooth duration={500}>
+              {texts.navItemContact}
+            </Link>
           </li>
         </ul>
       </aside>

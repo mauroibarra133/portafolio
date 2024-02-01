@@ -39,6 +39,7 @@ export const LanguageContextProvider = ({ children }) => {
         "Una web adaptada a un restaurante local que permite realizar pedidos online y administrar tu local.",
       projectButton1: "Repositorio",
       projectButton2: "Visitar",
+      footerTitle: "Contáctame",
     },
     en: {
       navItemHome: "Home",
@@ -74,6 +75,7 @@ export const LanguageContextProvider = ({ children }) => {
         "A web made to a local restaurant thar enables to make online orders and administrate your local.",
       projectButton1: "Repository",
       projectButton2: "Visit",
+      footerTitle: "Contact me",
     },
   };
   const initialLanguage = "en";
