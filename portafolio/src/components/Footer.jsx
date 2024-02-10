@@ -1,12 +1,14 @@
 import { useThemeContext } from "../context/ThemeContext.jsx";
-import "../styles/footer.css";
 import { useLanguageContext } from "../context/LanguageContext";
+import "../styles/footer.css";
 import { Link } from "react-router-dom";
 
 import linkedinIcon from "../assets/linkedin-icon.png";
 import githubIcon from "../assets/github2-icon.png";
 import igIcon from "../assets/ig-icon.png";
 import wspIcon from "../assets/wsp-icon.png";
+
+import Copyright from "./Copyright.jsx";
 
 function Footer() {
   const { contextTheme } = useThemeContext();
@@ -23,27 +25,38 @@ function Footer() {
           </p>
         </div>
         <div className="footer-icons">
-          <Link className="footer-item">
-            <img src={linkedinIcon} alt="" className="footer-icon" />
+          <Link
+            to={`https://www.linkedin.com/in/mauroibarra133/`}
+            className="footer-item"
+          >
+            <img
+              src={linkedinIcon}
+              alt="linkedin-icon"
+              className="footer-icon"
+            />
             <p className={`footer-icon-desc ${contextTheme}`}>mauroibarra133</p>
           </Link>
-          <Link className="footer-item">
-            <img src={githubIcon} alt="" className="footer-icon" />
+          <Link
+            to={`https://github.com/mauroibarra133/`}
+            className="footer-item"
+          >
+            <img src={githubIcon} alt="github-icon" className="footer-icon" />
             <p className={`footer-icon-desc ${contextTheme}`}>mauroibarra133</p>
           </Link>
-          <Link className="footer-item">
-            <img src={igIcon} alt="" className="footer-icon" />
+          <Link
+            to={`https://www.instagram.com/mauritoibarra/`}
+            className="footer-item"
+          >
+            <img src={igIcon} alt="footer-icon" className="footer-icon" />
             <p className={`footer-icon-desc ${contextTheme}`}>mauroibarra133</p>
           </Link>
-          <Link className="footer-item">
-            <img src={wspIcon} alt="" className="footer-icon" />
+          <Link to={`https://w.app/mauroibarra`} className="footer-item">
+            <img src={wspIcon} alt="whatsapp-icon" className="footer-icon" />
             <p className={`footer-icon-desc ${contextTheme}`}>mauroibarra133</p>
           </Link>
-        </div>
-        <div className={`footer-copyright ${contextTheme}`}>
-          <p>Copyright @ 2024 Ibarra. All rights reserved</p>
         </div>
       </div>
+      <Copyright />
     </section>
   );
 }

@@ -1,3 +1,7 @@
+#footer{
+    flex-direction: column;
+    justify-content: space-between;
+}
 .footer-container{
     padding-top: 2rem;
     position: relative;
@@ -24,6 +28,11 @@
     align-items: center;
     gap: 1rem;
     text-decoration: none;
+    transition: all .5 ease;
+}
+.footer-item:hover{
+    filter: brightness(1.05);
+    transform: scale(1.02);
 }
 .footer-icon{
     width: 40px;
@@ -41,8 +50,8 @@
     color: var(--dgray-1);
 }
 .footer-copyright{
-    position: absolute;
-    bottom: 0;
+    display: flex;
+
     padding-top: .5rem;
 }
 .footer-copyright.light{
@@ -70,6 +79,9 @@
     #footer{
         min-height: 500px;
     }
+    .footer-container{
+        gap: 4rem;
+    }
 
 }
 @media only screen and (min-width: 768px){
@@ -77,6 +89,9 @@
 
     .footer-container{
         padding-bottom: 4rem;
+    }
+    #footer{
+        padding-bottom: 1rem;
     }
 
 }
