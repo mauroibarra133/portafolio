@@ -34,12 +34,17 @@ export const LanguageContextProvider = ({ children }) => {
       language2: "INGLES",
       lglLvl1: "NATIVO",
       lglLvl2: "AVANZADO",
+      skillsTitl1: "Tecnologias",
+      skillsTitl2: "Frameworks",
+      skillsTitl3: "Herramientas",
       project1Name: "Website de Alares",
       project1Description:
         "Una web adaptada a un restaurante local que permite realizar pedidos online y administrar tu local.",
       projectButton1: "Repositorio",
       projectButton2: "Visitar",
       footerTitle: "Contáctame",
+      footerDesc: 'Llámame, escríbeme un mail o contactame a traves de Linkedin'
+
     },
     en: {
       navItemHome: "Home",
@@ -70,12 +75,16 @@ export const LanguageContextProvider = ({ children }) => {
       language2: "ENGLISH",
       lglLvl1: "NATIVE",
       lglLvl2: "ADVANCED",
+      skillsTitl1: "Tecnologies",
+      skillsTitl2: "Frameworks",
+      skillsTitl3: "Tools",
       project1Name: "Alares Restaurant Website",
       project1Description:
         "A web made to a local restaurant thar enables to make online orders and administrate your local.",
       projectButton1: "Repository",
       projectButton2: "Visit",
       footerTitle: "Contact me",
+      footerDesc: 'Call me, write me an e-mail, or connect and chat with me on Linkedin'
     },
   };
   const initialLanguage = "en";

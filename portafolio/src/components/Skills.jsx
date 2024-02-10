@@ -26,17 +26,17 @@ function Skills() {
   const tools = [sqlServerIcon,viteIcon,githubIcon,figmaIcon,dockerIcon];
   const skills = [
     {
-      title: "tecnologies",
+      title: texts.skillsTitl1,
       unity: "tecnology",
       array: tecnologies,
     },
     {
-      title: "frameworks",
+      title: texts.skillsTitl2,
       unity: "framework",
       array: frameworks,
     },
     {
-      title: "tools",
+      title: texts.skillsTitl3,
       unity: "tool",
       array: tools,
     },

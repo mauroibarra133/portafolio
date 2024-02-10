@@ -20,8 +20,7 @@ function Footer() {
         <div className={`footer-title section-title ${contextTheme}`}>
           <h2 className={contextTheme}>{texts.footerTitle}</h2>
           <p className={`footer-desc ${contextTheme}`}>
-            Call me, write me an e-mail, or connect and chat with me on
-            Linkedin.
+      {texts.footerDesc}
           </p>
         </div>
         <div className="footer-icons">
