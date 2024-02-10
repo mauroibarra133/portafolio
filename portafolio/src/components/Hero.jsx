@@ -1,11 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import "../styles/hero.css";
+import pdfFile from "../assets/pdfs/MAUROIBARRA-CV-2024.pdf";
+
 import ReactSwitch from "react-switch";
 import { useState } from "react";
 import { useThemeContext } from "../context/ThemeContext";
 import { useLanguageContext } from "../context/LanguageContext";
 import { Link } from "react-scroll";
+import { saveAs } from "file-saver";
 
 function Hero() {
   const [checked, setChecked] = useState(
@@ -18,6 +21,17 @@ function Hero() {
     setContextTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
     setChecked(nextChecked);
   }
+
+  const handleDownload = () => {
+    // Cargar el archivo PDF como un Blob
+    fetch(pdfFile)
+      .then((response) => response.blob())
+      .then((blob) => {
+        // Descargar el archivo usando file-saver
+        saveAs(blob, "MAUROIBARRA-CV-2024.pdf");
+      })
+      .catch((error) => console.error("Error al cargar el archivo:", error));
+  };
 
   return (
     <section id="home" name="#home">
@@ -91,6 +105,7 @@ function Hero() {
           </Link>
           <div
             className={`button hero-button hero-button-resume ${contextTheme}`}
+            onClick={handleDownload}
           >
             <FontAwesomeIcon
               icon={faDownload}

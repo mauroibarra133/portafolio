@@ -14,12 +14,19 @@ function Nav({ switchNav, isNavOpen }) {
   return (
     <div className={`nav ${contextTheme}`}>
       <div className={`nav-container ${contextTheme}`}>
-        <div className="nav-icon-container">
+        <Link
+          className="nav-icon-container"
+          to="#home"
+          spy
+          smooth
+          duration={500}
+          offset={-50}
+        >
           <FontAwesomeIcon
             icon={faBriefcase}
             className={`nav-icon ${contextTheme}`}
           />
-        </div>
+        </Link>
         <div className="nav-menu">
           <FontAwesomeIcon
             icon={faBars}
