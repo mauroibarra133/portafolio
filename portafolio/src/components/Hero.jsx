@@ -5,6 +5,7 @@ import ReactSwitch from "react-switch";
 import { useState } from "react";
 import { useThemeContext } from "../context/ThemeContext";
 import { useLanguageContext } from "../context/LanguageContext";
+import { Link } from "react-scroll";
 
 function Hero() {
   const [checked, setChecked] = useState(
@@ -79,10 +80,18 @@ function Hero() {
         </div>
 
         <div className="hero-buttons">
-          <div className={`button hero-button hero-button-contact ${contextTheme}`}>
+          <Link
+            to="#footer"
+            spy
+            smooth
+            duration={500}
+            className={`button hero-button hero-button-contact ${contextTheme}`}
+          >
             <p>{texts.heroButtonContactame}</p>
-          </div>
-          <div className={`button hero-button hero-button-resume ${contextTheme}`}>
+          </Link>
+          <div
+            className={`button hero-button hero-button-resume ${contextTheme}`}
+          >
             <FontAwesomeIcon
               icon={faDownload}
               className={`hero-button-resume--icon ${contextTheme}`}

@@ -13,7 +13,6 @@ function App() {
     setIsNavOpen(!isNavOpen);
   };
 
-
   useEffect(() => {
     // Función para manejar el evento de cambio de tamaño de la ventana
     const handleResize = () => {
@@ -35,13 +34,11 @@ function App() {
     <BrowserRouter>
       <div className={`app-container ${contextTheme}`}>
         <Nav switchNav={switchNav} isNavOpen={isNavOpen} />
-        {/* <Overlay closeNav={closeNav} isNavOpen={isNavOpen}> */}
-        <div className="body">
-          <Routes>
-            <Route path="/" element={<Page />} />
-          </Routes>
-        </div>
-        {/* </Overlay> */}
+          <div className="body">
+            <Routes>
+              <Route path="/" element={<Page />} />
+            </Routes>
+          </div>
       </div>
     </BrowserRouter>
   );

@@ -70,6 +70,7 @@ table{
     flex-direction: column;
     max-width: 600px;
     margin: 0 auto;
+    position: relative;
 }
 .small-table{
     max-width: 300px;

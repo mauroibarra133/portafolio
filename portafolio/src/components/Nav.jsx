@@ -4,6 +4,7 @@ import "../styles/nav.css";
 import { Link } from "react-scroll";
 import { useThemeContext } from "../context/ThemeContext.jsx";
 import { useLanguageContext } from "../context/LanguageContext.jsx";
+import Overlay from "./Overlay.jsx";
 
 // eslint-disable-next-line react/prop-types
 function Nav({ switchNav, isNavOpen }) {
@@ -76,22 +77,23 @@ function Nav({ switchNav, isNavOpen }) {
             </Link>
           </li>
           <li className={`aside-item ${contextTheme}`}>
-            <Link to="#projects" spy smooth duration={500}>
+            <Link to="#projects" spy smooth duration={500} onClick={switchNav}>
               {texts.navItemProjects}
             </Link>
           </li>
           <li className={`aside-item ${contextTheme}`}>
-            <Link to="#skills" spy smooth duration={500}>
+            <Link to="#skills" spy smooth duration={500} onClick={switchNav}>
               {texts.navItemSkills}
             </Link>
           </li>
           <li className={`aside-item ${contextTheme}`}>
-            <Link to="#footer" spy smooth duration={500}>
+            <Link to="#footer" spy smooth duration={500} onClick={switchNav}>
               {texts.navItemContact}
             </Link>
           </li>
         </ul>
       </aside>
+      {isNavOpen && <Overlay isOpen={isNavOpen} onClose={switchNav}></Overlay>}
     </div>
   );
 }

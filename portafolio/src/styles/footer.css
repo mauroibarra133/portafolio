@@ -6,6 +6,9 @@
     padding-top: 2rem;
     position: relative;
 }
+.footer-desc{
+    text-align: center;
+}
 .footer-desc.light{
     color: var(--black-1);
     font-family: var(--font-roboto);
