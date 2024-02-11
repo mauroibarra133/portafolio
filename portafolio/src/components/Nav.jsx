@@ -42,7 +42,7 @@ function Nav({ switchNav, isNavOpen }) {
               </Link>
             </li>
             <li className={`nav-item ${contextTheme}`}>
-              <Link to="#aboutme" spy smooth duration={500}>
+              <Link to="#aboutme" spy smooth duration={500} offset={-50}>
                 {texts.navItemAbout}
               </Link>
             </li>
@@ -52,7 +52,7 @@ function Nav({ switchNav, isNavOpen }) {
               </Link>
             </li>
             <li className={`nav-item ${contextTheme}`}>
-              <Link to="#skills" spy smooth duration={500}>
+              <Link to="#skills" spy smooth duration={500} offset={-30}>
                 {texts.navItemSkills}
               </Link>
             </li>
