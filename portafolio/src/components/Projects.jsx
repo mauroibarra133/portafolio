@@ -1,6 +1,11 @@
 import { useThemeContext } from "../context/ThemeContext";
 import { useLanguageContext } from "../context/LanguageContext";
+import { Link } from "react-router-dom";
 import alaresProjectImage from "../assets/alares-project.png";
+import colorFlipperProjectImage from "../assets/color-flipper-preview.png";
+import laEstacionProjectImage from "../assets/laestacion-preview.png";
+import pomoTimerProjectImage from "../assets/pomotimer-preview.png";
+
 import "../styles/projects.css";
 
 function Projects() {
@@ -12,22 +17,30 @@ function Projects() {
       projectTitle: texts.project1Name,
       projectDescription: texts.project1Description,
       projectImage: alaresProjectImage,
+      projectLink: "https://alaresjm.onrender.com",
+      projectRepository: "https://github.com/mauroibarra133/alaresjm",
     },
     {
-        projectTitle: texts.project1Name,
-        projectDescription: texts.project1Description,
-        projectImage: alaresProjectImage,
-      },
-      {
-        projectTitle: texts.project1Name,
-        projectDescription: texts.project1Description,
-        projectImage: alaresProjectImage,
-      },
-      {
-        projectTitle: texts.project1Name,
-        projectDescription: texts.project1Description,
-        projectImage: alaresProjectImage,
-      }
+      projectTitle: texts.project2Name,
+      projectDescription: texts.project2Description,
+      projectImage: colorFlipperProjectImage,
+      projectLink: "https://mauroibarra133.github.io/ColorFlipper/",
+      projectRepository: "https://github.com/mauroibarra133/ColorFlipper",
+    },
+    {
+      projectTitle: texts.project3Name,
+      projectDescription: texts.project3Description,
+      projectImage: laEstacionProjectImage,
+      projectLink: "https://mauroibarra133.github.io/La-Estacion/",
+      projectRepository: "https://github.com/mauroibarra133/La-Estacion",
+    },
+    {
+      projectTitle: texts.project4Name,
+      projectDescription: texts.project4Description,
+      projectImage: pomoTimerProjectImage,
+      projectLink: "https://mauroibarra133.github.io/Pomodoro-Timer/",
+      projectRepository: "https://github.com/mauroibarra133/Pomodoro-Timer",
+    },
   ];
 
   return (
@@ -50,12 +63,16 @@ function Projects() {
                   {project.projectDescription}
                 </p>
                 <div className="project-buttons">
-                  <div className={`button project-button ${contextTheme}`}>
-                    <p>{texts.projectButton1}</p>
-                  </div>
-                  <div className={`button project-button ${contextTheme}`}>
-                    <p>{texts.projectButton2}</p>
-                  </div>
+                  <button className={`button project-button ${contextTheme}`}>
+                    <Link to={project.projectRepository} target="_blank">
+                      <p>{texts.projectButton1}</p>
+                    </Link>
+                  </button>
+                  <button className={`button project-button ${contextTheme}`}>
+                    <Link to={project.projectLink} target="_blank">
+                      <p>{texts.projectButton2}</p>
+                    </Link>
+                  </button>
                 </div>
               </div>
             </div>

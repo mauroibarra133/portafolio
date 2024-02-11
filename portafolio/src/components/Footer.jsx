@@ -19,12 +19,11 @@ function Footer() {
       <div className="section-container footer-container">
         <div className={`footer-title section-title ${contextTheme}`}>
           <h2 className={contextTheme}>{texts.footerTitle}</h2>
-          <p className={`footer-desc ${contextTheme}`}>
-      {texts.footerDesc}
-          </p>
+          <p className={`footer-desc ${contextTheme}`}>{texts.footerDesc}</p>
         </div>
         <div className="footer-icons">
           <Link
+            target="_blank"
             to={`https://www.linkedin.com/in/mauroibarra133/`}
             className="footer-item"
           >
@@ -36,6 +35,7 @@ function Footer() {
             <p className={`footer-icon-desc ${contextTheme}`}>mauroibarra133</p>
           </Link>
           <Link
+            target="_blank"
             to={`https://github.com/mauroibarra133/`}
             className="footer-item"
           >
@@ -43,6 +43,7 @@ function Footer() {
             <p className={`footer-icon-desc ${contextTheme}`}>mauroibarra133</p>
           </Link>
           <Link
+            target="_blank"
             to={`https://www.instagram.com/mauritoibarra/`}
             className="footer-item"
           >
