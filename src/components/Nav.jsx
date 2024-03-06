@@ -24,7 +24,7 @@ function Nav({ switchNav, isNavOpen }) {
         >
           <FontAwesomeIcon
             icon={faBriefcase}
-            className={`nav-icon ${contextTheme}`}
+            className={`nav-icon ${contextTheme} nav-icon-brief`}
           />
         </Link>
         <div className="nav-menu">

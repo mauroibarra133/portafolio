@@ -1,5 +1,5 @@
 import { useThemeContext } from "../context/ThemeContext.jsx";
-import { useLanguageContext } from "../context/LanguageContext";
+import { useLanguageContext } from "../context/LanguageContext.jsx";
 import "../styles/footer.css";
 import { Link } from "react-router-dom";
 

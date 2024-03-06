@@ -35,6 +35,9 @@ NAV
 .nav-icon.light{
     color: var(--black-1);
 }
+.nav-icon-brief.light{
+    color: var(--gray-4);
+}
 .nav-icon.dark{
     color: var(--dwhite-1);
 

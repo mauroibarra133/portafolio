@@ -7,7 +7,7 @@ import {
 import { useThemeContext } from "../context/ThemeContext.jsx";
 import "../styles/aboutme.css";
 import { useState } from "react";
-import { useLanguageContext } from "../context/LanguageContext";
+import { useLanguageContext } from "../context/LanguageContext.jsx";
 import JobTable from "./Table/JobTable.jsx";
 import EducationTable from "./Table/EducationTable.jsx";
 import LanguageTable from "./Table/LanguageTable.jsx";

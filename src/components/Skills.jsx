@@ -1,6 +1,6 @@
 import { useThemeContext } from "../context/ThemeContext.jsx";
 import "../styles/skills.css";
-import { useLanguageContext } from "../context/LanguageContext";
+import { useLanguageContext } from "../context/LanguageContext.jsx";
 
 import htmlIcon from "../assets/html-icon.png";
 import cssIcon from "../assets/css-icon.png";
@@ -21,9 +21,9 @@ import dockerIcon from "../assets/docker.svg";
 function Skills() {
   const { contextTheme } = useThemeContext();
   const { texts } = useLanguageContext();
-  const tecnologies = [htmlIcon, cssIcon, jsIcon, pyIcon,phpIcon];
-  const frameworks = [reactIcon,nodeIcon,bsIcon,sassIcon,laravelIcon];
-  const tools = [sqlServerIcon,viteIcon,githubIcon,figmaIcon,dockerIcon];
+  const tecnologies = [htmlIcon, cssIcon, jsIcon, pyIcon, phpIcon];
+  const frameworks = [reactIcon, nodeIcon, bsIcon, sassIcon, laravelIcon];
+  const tools = [sqlServerIcon, viteIcon, githubIcon, figmaIcon, dockerIcon];
   const skills = [
     {
       title: texts.skillsTitl1,
