@@ -5,6 +5,7 @@ import alaresProjectImage from "../assets/alares-project.png";
 import colorFlipperProjectImage from "../assets/color-flipper-preview.png";
 import laEstacionProjectImage from "../assets/laestacion-preview.png";
 import pomoTimerProjectImage from "../assets/pomotimer-preview.png";
+import ultraseguridadProjectImage from "../assets/ultraseguridad-preview.png";
 
 import "../styles/projects.css";
 
@@ -14,18 +15,18 @@ function Projects() {
 
   const projects = [
     {
-      projectTitle: texts.project1Name,
-      projectDescription: texts.project1Description,
-      projectImage: alaresProjectImage,
-      projectLink: "https://alaresjm.onrender.com",
-      projectRepository: "https://github.com/mauroibarra133/alaresjm",
-    },
-    {
       projectTitle: texts.project2Name,
       projectDescription: texts.project2Description,
       projectImage: colorFlipperProjectImage,
       projectLink: "https://mauroibarra133.github.io/ColorFlipper/",
       projectRepository: "https://github.com/mauroibarra133/ColorFlipper",
+    },
+    {
+      projectTitle: texts.project4Name,
+      projectDescription: texts.project4Description,
+      projectImage: pomoTimerProjectImage,
+      projectLink: "https://mauroibarra133.github.io/Pomodoro-Timer/",
+      projectRepository: "https://github.com/mauroibarra133/Pomodoro-Timer",
     },
     {
       projectTitle: texts.project3Name,
@@ -35,11 +36,18 @@ function Projects() {
       projectRepository: "https://github.com/mauroibarra133/La-Estacion",
     },
     {
-      projectTitle: texts.project4Name,
-      projectDescription: texts.project4Description,
-      projectImage: pomoTimerProjectImage,
-      projectLink: "https://mauroibarra133.github.io/Pomodoro-Timer/",
-      projectRepository: "https://github.com/mauroibarra133/Pomodoro-Timer",
+      projectTitle: texts.project1Name,
+      projectDescription: texts.project1Description,
+      projectImage: alaresProjectImage,
+      projectLink: "https://alaresjm.onrender.com",
+      projectRepository: "https://github.com/mauroibarra133/alaresjm",
+    },
+    {
+      projectTitle: texts.project5Name,
+      projectDescription: texts.project5Description,
+      projectImage: ultraseguridadProjectImage,
+      projectLink: "https://ultraseguridad.vercel.app/login",
+      projectRepository: "https://github.com/mauroibarra133/ultraseguridad",
     },
   ];
 
@@ -50,7 +58,7 @@ function Projects() {
           <h2 className={contextTheme}>{texts.navItemProjects}</h2>
         </div>
         <div className="projects">
-          {projects.map((project, index) => (
+          {[...projects].reverse().map((project, index) => (
             <div className={`project ${contextTheme}`} key={index}>
               <div className="photo">
                 <img src={project.projectImage} alt={project.projectTitle} />

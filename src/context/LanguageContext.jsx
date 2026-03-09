@@ -24,9 +24,10 @@ export const LanguageContextProvider = ({ children }) => {
       jobHead2: "PUESTO",
       jobName1: "DESARROLLADOR PHP",
       jobName2: "SOPORTE TECNICO",
+      jobName3: "DESARROLLADOR DE SOFTWARE",
       educationHead1: "INSTITUCION",
       educationHead2: "TITULO",
-      degree1: "INGENIERIA EN SISTEMAS",
+      degree1: "INGENIERO EN SISTEMAS",
       degree2: "ECONOMIA Y GESTION",
       languageHead1: "IDIOMA",
       languageHead2: "NIVEL",
@@ -39,7 +40,7 @@ export const LanguageContextProvider = ({ children }) => {
       skillsTitl3: "Herramientas",
       project1Name: "Website de Alares",
       project1Description:
-        "Una web adaptada a un restaurante local que permite realizar pedidos online y administrar tu local.",
+        "Web diseñada para la gestión de un bar de Jesús Maria, donde se pueden realizar reservas, pedidos y administrar la carta de menús.",
       project2Name: "Color Flipper",
       project2Description:
         "Diseñado para generar fondos aleatoriamente en formato hexadecimal o por palabra clave, así como filtrar colores.",
@@ -49,6 +50,9 @@ export const LanguageContextProvider = ({ children }) => {
       project4Name: "PomoTimer",
       project4Description:
         "Pomodoro Timer: mejora tu productividad con la técnica Pomodoro, gestionando tareas y generando informes.",
+      project5Name: "Ultraseguridad",
+      project5Description:
+        "Sistema de gestión de turnos para una empresa de Cordoba que se dedica a la seguridad privada",
       projectButton1: "Repositorio",
       projectButton2: "Visitar",
       footerTitle: "Contáctame",
@@ -74,9 +78,10 @@ export const LanguageContextProvider = ({ children }) => {
       jobHead2: "JOB",
       jobName1: "PHP DEVELOPER",
       jobName2: "TECHNICAL SUPPORT",
+      jobName3: "SOFTWARE DEVELOPER",
       educationHead1: "SCHOOL",
       educationHead2: "DEGREE",
-      degree1: "INFORMATION SYSTEMS ENGINEERING",
+      degree1: "INFORMATION SYSTEMS ENGINEER",
       degree2: "ECONOMY AND MANAGMENT",
       languageHead1: "LANGUAGE",
       languageHead2: "LEVEL",
@@ -99,6 +104,9 @@ export const LanguageContextProvider = ({ children }) => {
       project4Name: "PomoTimer",
       project4Description:
         "Pomodoro Timer: boost your productivity with the Pomodoro technique, managing tasks, and generating reports.",
+      project5Name: "Ultraseguridad",
+      project5Description:
+        "Web for a security company from Cordoba that manages security guards",
       projectButton1: "Repository",
       projectButton2: "Visit",
       footerTitle: "Contact me",

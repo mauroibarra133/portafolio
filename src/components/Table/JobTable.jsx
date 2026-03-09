@@ -1,5 +1,6 @@
 import { useThemeContext } from "../../context/ThemeContext";
 import hiIcon from "../../assets/hi-icon.jpg";
+import mercadolibreIcon from "../../assets/mercadolibre-icon.webp";
 import { useLanguageContext } from "../../context/LanguageContext";
 
 function JobTable() {
@@ -8,14 +9,19 @@ function JobTable() {
 
   const jobs = [
     {
+      jobName: texts.jobName2,
+      companyName: "HOSPITAL ITALIANO",
+      iconCompany: hiIcon,
+    },
+    {
       jobName: texts.jobName1,
       companyName: "HOSPITAL ITALIANO",
       iconCompany: hiIcon,
     },
     {
-      jobName: texts.jobName2,
-      companyName: "HOSPITAL ITALIANO",
-      iconCompany: hiIcon,
+      jobName: texts.jobName3,
+      companyName: "MERCADO LIBRE",
+      iconCompany: mercadolibreIcon,
     },
   ];
 
@@ -32,7 +38,7 @@ function JobTable() {
         </tr>
       </thead>
       <tbody className={`table-body ${contextTheme}`}>
-        {jobs.map((job, index) => (
+        {jobs.reverse().map((job, index) => (
           <tr key={index}>
             <td className={`table-body-data ${contextTheme}`}>
               <div className="job-data">
