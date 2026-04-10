@@ -137,7 +137,13 @@ export const LanguageContextProvider = ({ children }) => {
     }
   };
 
-  const values = { texts, handleLanguage };
+  const toggleLanguage = () => {
+    const newLanguage = language === "es" ? "en" : "es";
+    setLanguage(newLanguage);
+    setTexts(translations[newLanguage]);
+  };
+
+  const values = { texts, handleLanguage, language, toggleLanguage };
 
   return (
     <LanguageContext.Provider value={values}>

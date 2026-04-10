@@ -19,6 +19,10 @@
   --white-2: #f3f3f3f2;
 
   /* Dark Mode Colors */
+  --dbackground: #0d1a12;
+  --dforeground: oklch(0.985 0 0);
+  --dhover-bg: rgba(228, 227, 227, 0.1);
+  --dgreen-icon: #4a9d50;
   --dblack-1 : #242629;
   --dblue-1: rgba(228, 227, 227, 0.62);
   --dblue-4: #0A223D;
@@ -26,13 +30,10 @@
   --dgreen-1: rgba(66, 108, 91, 0.85);
   --dgreen-2: #9fe1c5d9;
   --dgreen-3: #374151;
-  --dwhite-1: #fff;
+  --dwhite-1: oklch(0.985 0 0);
   --dwhite-2: #d7d7d7;
   --dgray-1: #E3E3E3;
   --dgray-2: #586574;
-
-
-
 
   --size-icons: 1.4rem;
   
@@ -44,6 +45,8 @@
   --font-roboto: 'Roboto', sans-serif;
   --font-itim: 'Itim', cursive;
   --font-rubik: 'Rubik', sans-serif;
+  --font-geist: 'Geist', sans-serif;
+  --font-geist-mono: 'Geist Mono', monospace;
 
   --z-nav: 10000;
   --z-aside: 1000;

@@ -9,11 +9,15 @@ export const ThemeContextProvider = ({ children }) => {
   const [contextTheme, setContextTheme] = useState(localStorage.getItem("selectedTheme") || initialTheme);
 
   useEffect(() => {
-    // Guardar la elección del idioma en el localStorage
+    // Guardar la elección del tema en el localStorage
     localStorage.setItem("selectedTheme", contextTheme);
   }, [contextTheme]);
 
-  const values = { contextTheme, setContextTheme };
+  const toggleTheme = () => {
+    setContextTheme(prevTheme => prevTheme === "light" ? "dark" : "light");
+  };
+
+  const values = { contextTheme, setContextTheme, toggleTheme };
 
   return (
     <ThemeContext.Provider value={values}>{children}</ThemeContext.Provider>
