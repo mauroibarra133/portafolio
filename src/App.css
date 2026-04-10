@@ -64,7 +64,7 @@ section{
   height: auto;
   min-height: calc(100vh - 57px);
   display: flex;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 .section-container{
@@ -135,4 +135,8 @@ p{
   /* min-height: calc(100vh - 70px); */
     min-height: auto;
     }
+}
+
+svg{
+  width: fit-content;
 }

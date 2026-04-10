@@ -5,6 +5,7 @@ import { useThemeContext } from "./context/ThemeContext";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Page from "./components/Page";
+import ProjectDetail from "./components/ProjectDetail";
 function App() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const { contextTheme } = useThemeContext();
@@ -37,6 +38,7 @@ function App() {
           <div className="body">
             <Routes>
               <Route path="/" element={<Page />} />
+              <Route path="/projects/:slug" element={<ProjectDetail />} />
             </Routes>
           </div>
       </div>
