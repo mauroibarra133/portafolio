@@ -54,7 +54,8 @@ export const LanguageContextProvider = ({ children }) => {
       project5Description:
         "Sistema de gestión de turnos para una empresa de Cordoba que se dedica a la seguridad privada",
       projectButton1: "Repositorio",
-      projectButton2: "Visitar",
+      projectButton2: "Ver Detalles",
+      projectsHeaderDescription: "Soluciones que he desarrollado para diferentes necesidades",
       footerTitle: "Contáctame",
       footerDesc:
         "Llámame, escríbeme un mail o contactame a traves de Linkedin",
@@ -108,7 +109,8 @@ export const LanguageContextProvider = ({ children }) => {
       project5Description:
         "Web for a security company from Cordoba that manages security guards",
       projectButton1: "Repository",
-      projectButton2: "Visit",
+      projectButton2: "View Details",
+      projectsHeaderDescription: "Solutions I've developed for different needs",
       footerTitle: "Contact me",
       footerDesc:
         "Call me, write me an e-mail, or connect and chat with me on Linkedin",

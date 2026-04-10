@@ -85,7 +85,7 @@ function Hero() {
             <h2
               className={`hero-description__name--profession ${contextTheme}`}
             >
-              Full Stack Developer
+              Software Engineer
             </h2>
           </div>
           <div className={`hero-description__text ${contextTheme}`}>
