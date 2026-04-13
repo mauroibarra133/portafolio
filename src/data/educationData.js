@@ -1,3 +1,5 @@
+import utnIcon from "../assets/about/utn-icon.jpg";
+
 export const educationData = [
   {
     institucion: "UTN - Regional Córdoba",
@@ -8,5 +10,7 @@ export const educationData = [
     ubicacion: "Córdoba, Argentina",
     estado: "Graduado",
     completed: true,
+    initials: "UTN",
+    logo: utnIcon
   },
 ];

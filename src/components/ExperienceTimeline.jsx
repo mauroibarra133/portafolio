@@ -9,6 +9,7 @@ import { useThemeContext } from "../context/ThemeContext.jsx";
 import { useLanguageContext } from "../context/LanguageContext.jsx";
 import { calculateDuration, formatPeriod } from "../utils/dateUtils.js";
 import { experienceData } from "../data/experienceData.js";
+import CompanyAvatar from "./CompanyAvatar.jsx";
 import "../styles/experience-timeline.css";
 
 function ExperienceTimeline() {
@@ -24,14 +25,12 @@ function ExperienceTimeline() {
       <div className="space-y-8">
         {experienceData.map((item, index) => (
           <div key={index} className="experience-timeline-item">
-            {/* Timeline Dot */}
-            <div
-              className={`experience-timeline-dot ${
-                item.actual ? "current" : ""
-              }`}
-            >
-              {item.actual && <div className="experience-timeline-dot-ping" />}
-            </div>
+            {/* Company Avatar */}
+            <CompanyAvatar
+              logo={item.logo}
+              initials={item.initials}
+              isActive={item.actual}
+            />
 
             {/* Experience Card */}
             <div className={`experience-card ${contextTheme}`}>

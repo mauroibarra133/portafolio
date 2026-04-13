@@ -1,3 +1,6 @@
+import mlIcon from "../assets/about/ml-icon.webp";
+import hiIcon from "../assets/about/hi-icon.webp";
+
 export const experienceData = [
   {
     empresa: "Mercado Libre",
@@ -12,6 +15,8 @@ export const experienceData = [
       "Colaboración con equipos multidisciplinarios en proyectos ágiles",
     ],
     actual: true,
+    initials: "ML",
+    logo: mlIcon,
   },
   {
     empresa: "Hospital Italiano",
@@ -26,5 +31,7 @@ export const experienceData = [
       "Optimización de bases de datos y consultas SQL",
     ],
     actual: false,
+    initials: "HI",
+    logo: hiIcon,
   },
 ];

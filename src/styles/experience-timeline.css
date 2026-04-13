@@ -347,3 +347,50 @@
     max-width: 100%;
   }
 }
+
+/* Company Avatar */
+.company-avatar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  background-color: var(--card);
+  border: 2px solid var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.company-avatar.dark {
+  background-color: var(--dcard-bg);
+  border-color: var(--dviolet-1);
+}
+
+.company-avatar.active {
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+}
+
+.company-avatar.dark.active {
+  box-shadow: 0 0 0 4px rgba(142, 148, 250, 0.2);
+}
+
+.company-avatar-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.company-avatar-initials {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--primary);
+  font-family: var(--font-geist);
+}
+
+.company-avatar.initials.dark {
+  color: var(--dviolet-1);
+}

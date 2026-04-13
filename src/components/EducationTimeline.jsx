@@ -10,6 +10,7 @@ import { useThemeContext } from "../context/ThemeContext.jsx";
 import { useLanguageContext } from "../context/LanguageContext.jsx";
 import { calculateDuration, formatPeriod } from "../utils/dateUtils.js";
 import { educationData } from "../data/educationData.js";
+import CompanyAvatar from "./CompanyAvatar.jsx";
 import "../styles/experience-timeline.css";
 
 function EducationTimeline() {
@@ -25,14 +26,12 @@ function EducationTimeline() {
       <div className="space-y-8">
         {educationData.map((item, index) => (
           <div key={index} className="experience-timeline-item">
-            {/* Timeline Dot */}
-            <div
-              className={`experience-timeline-dot ${
-                item.completed ? "current" : ""
-              }`}
-            >
-              {item.completed && <div className="experience-timeline-dot-ping" />}
-            </div>
+            {/* Company Avatar */}
+            <CompanyAvatar
+              logo={item.logo}
+              initials={item.initials}
+              isActive={!item.completed}
+            />
 
             {/* Experience Card */}
             <div className={`experience-card ${contextTheme}`}>
