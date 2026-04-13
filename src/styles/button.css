@@ -31,7 +31,7 @@
 }
 
 .button-default:hover {
-  background-color: var(--violet-1);
+  background-color: var(--violet-2);
 }
 
 .button-ghost {
@@ -43,6 +43,15 @@
 }
 
 .button-ghost.dark:hover {
+  background-color: rgba(228, 227, 227, 0.1);
+}
+
+.button-outline {
+  background-color: transparent;
+  color: var(--violet-2);
+}
+
+.button-outline.light:hover {
   background-color: rgba(228, 227, 227, 0.1);
 }
 

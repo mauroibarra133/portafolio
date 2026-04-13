@@ -11,7 +11,7 @@
     background-color: var(--white-2);
   }
   .app-container.dark{
-    background-color: var(--dblue-4);
+    background-color: var(--dbackground);
   }
 
   .body{

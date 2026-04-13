@@ -18,10 +18,37 @@
   --white-1: #fff;
   --white-2: #f3f3f3f2;
 
+  /* Hero Section Variables */
+  --primary: var(--violet-2);
+  --primary-10: rgba(43, 53, 117, 0.1);
+  --primary-20: rgba(43, 53, 117, 0.2);
+  --primary-30: rgba(43, 53, 117, 0.3);
+  --accent: var(--violet-1);
+  --foreground: var(--black-1);
+  --muted-foreground: var(--gray-3);
+  --card: var(--white-1);
+  --card-bg: #edf1f2;
+  --border: var(--gray-6);
+  --border-50: rgba(233, 233, 233, 0.5);
+  --secondary: var(--gray-6);
+  --secondary-foreground: var(--gray-4);
+
+  /* Technology Colors */
+  --tech-react: #2d7a38;
+  --tech-typescript: #3178c6;
+  --tech-postgresql: #336791;
+  --tech-openai: #8e44ad;
+  --tech-whatsapp: #25d366;
+  --tech-pwa: #ff6b35;
+
   /* Dark Mode Colors */
-  --dbackground: #0d1a12;
+  --dbackground: #0a0a12;
   --dforeground: oklch(0.985 0 0);
   --dhover-bg: rgba(228, 227, 227, 0.1);
+  --dviolet-1: hsl(237, 92%, 77%);
+  --dcard-bg: #10111a;
+  --dcard-border: #1a1b2e;
+  --dmuted-foreground: #8c8e9c;
   --dgreen-icon: #4a9d50;
   --dblack-1 : #242629;
   --dblue-1: rgba(228, 227, 227, 0.62);
@@ -82,7 +109,7 @@ p{
 }
 
 .section-title{
-  font-family: var(--font-roboto);
+  font-family: var(--font-geist);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -90,10 +117,10 @@ p{
   gap: 1.5rem;
 }
 .section-title.light{
-  color: var(--blue-2);
+  color: var(--foreground);
 }
 .section-title.dark{
-  color: var(--dgreen-2);
+  color: var(--dgray-1);
 }
 .section-title h2{
   text-align: center;
@@ -101,10 +128,10 @@ p{
   padding-bottom: .2rem;
 }
 .section-title h2.light{
-  border-bottom: 2px solid var(--blue-2);
+  border-bottom: none;
 }
 .section-title h2.dark{
-  border-bottom: 2px solid var(--dgreen-2);
+  border-bottom: none;
 }
 
 /* BUTTONS */
@@ -142,4 +169,13 @@ p{
 
 svg{
   width: fit-content;
+}
+
+a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
 }

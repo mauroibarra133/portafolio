@@ -1,4 +1,116 @@
 
+/* Header */
+.about-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.about-title-text {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: var(--font-geist);
+}
+
+.about-title-text.light {
+    color: var(--foreground);
+}
+
+.about-title-text.dark {
+    color: var(--dgray-1);
+}
+
+.about-subtitle {
+    font-size: 1.125rem;
+    max-width: 42rem;
+    margin: 0 auto;
+}
+
+.about-subtitle.light {
+    color: var(--muted-foreground);
+}
+
+.about-subtitle.dark {
+    color: var(--dmuted-foreground);
+}
+
+/* Tabs Container */
+.about-tabs-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+}
+
+.about-tabs {
+    display: inline-flex;
+    padding: 0.25rem;
+    border-radius: 0.75rem;
+    width: fit-content;
+
+}
+
+.about-tabs.light {
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.about-tabs.dark {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Tab Items */
+.about-tab-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: fit-content;
+}
+
+.about-tab-item.light {
+    color: var(--muted-foreground);
+}
+
+.about-tab-item.dark {
+    color: var(--dmuted-foreground);
+}
+
+.about-tab-item.light:hover {
+    color: var(--foreground);
+}
+
+.about-tab-item.dark:hover {
+    color: var(--dgray-1);
+}
+
+.about-tab-item.active.light {
+    background-color: var(--card-bg);
+    color: var(--foreground);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.about-tab-item.active.dark {
+    background-color: var(--dcard-bg);
+    color: var(--dviolet-1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.about-tab-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+.about-tab-text {
+    font-family: var(--font-roboto);
+}
+
+/* Old Nav Styles (kept for backward compatibility) */
 .about-nav{
     display: flex;
     justify-content: space-evenly;

@@ -11,6 +11,9 @@ import { useLanguageContext } from "../context/LanguageContext.jsx";
 import JobTable from "./Table/JobTable.jsx";
 import EducationTable from "./Table/EducationTable.jsx";
 import LanguageTable from "./Table/LanguageTable.jsx";
+import ExperienceTimeline from "./ExperienceTimeline.jsx";
+import EducationTimeline from "./EducationTimeline.jsx";
+import Languages from "./Languages.jsx";
 
 function AboutMe() {
   const { contextTheme } = useThemeContext();
@@ -28,60 +31,70 @@ function AboutMe() {
   return (
     <section id="aboutme" name="#aboutme">
       <div className="section-container">
-        <div className={`about-title section-title ${contextTheme}`}>
-          <h2 className={contextTheme}>{texts.navItemAbout}</h2>
+        {/* Section header */}
+        <div className="about-header">
+          <h2 className={`about-title-text ${contextTheme}`}>
+            {texts.navItemAbout}
+          </h2>
+          <p className={`about-subtitle ${contextTheme}`}>
+            {texts.aboutSubtitle}
+          </p>
         </div>
-        <div className="about-nav">
-          <div
-            className={`about-nav-item ${
-              activeTag == 1 ? "active" : ""
-            } ${contextTheme}`}
-            onClick={() => handleTagClick(1)}
-            key={1}
-          >
-            <FontAwesomeIcon
-              icon={faBriefcase}
-              className={`nav-icon ${contextTheme}`}
-            />
-            <p className={`nav-icon-text ${contextTheme}`}>
-              {texts.aboutNavItem1}
-            </p>
-          </div>
-          <div
-            className={`about-nav-item ${
-              activeTag == 2 ? "active" : ""
-            } ${contextTheme}`}
-            onClick={() => handleTagClick(2)}
-            key={2}
-          >
-            <FontAwesomeIcon
-              icon={faUniversity}
-              className={`nav-icon ${contextTheme}`}
-            />
-            <p className={`nav-icon-text ${contextTheme}`}>
-              {texts.aboutNavItem2}
-            </p>
-          </div>
-          <div
-            className={`about-nav-item ${
-              activeTag == 3 ? "active" : ""
-            } ${contextTheme}`}
-            onClick={() => handleTagClick(3)}
-            key={3}
-          >
-            <FontAwesomeIcon
-              icon={faLanguage}
-              className={`nav-icon ${contextTheme}`}
-            />
-            <p className={`nav-icon-text ${contextTheme}`}>
-              {texts.aboutNavItem3}
-            </p>
+
+        {/* Tabs */}
+        <div className="about-tabs-container">
+          <div className={`about-tabs ${contextTheme}`}>
+            <div
+              className={`about-tab-item ${
+                activeTag == 1 ? "active" : ""
+              } ${contextTheme}`}
+              onClick={() => handleTagClick(1)}
+              key={1}
+            >
+              <FontAwesomeIcon
+                icon={faBriefcase}
+                className={`about-tab-icon ${contextTheme}`}
+              />
+              <span className={`about-tab-text ${contextTheme}`}>
+                {texts.aboutNavItem1}
+              </span>
+            </div>
+            <div
+              className={`about-tab-item ${
+                activeTag == 2 ? "active" : ""
+              } ${contextTheme}`}
+              onClick={() => handleTagClick(2)}
+              key={2}
+            >
+              <FontAwesomeIcon
+                icon={faUniversity}
+                className={`about-tab-icon ${contextTheme}`}
+              />
+              <span className={`about-tab-text ${contextTheme}`}>
+                {texts.aboutNavItem2}
+              </span>
+            </div>
+            <div
+              className={`about-tab-item ${
+                activeTag == 3 ? "active" : ""
+              } ${contextTheme}`}
+              onClick={() => handleTagClick(3)}
+              key={3}
+            >
+              <FontAwesomeIcon
+                icon={faLanguage}
+                className={`about-tab-icon ${contextTheme}`}
+              />
+              <span className={`about-tab-text ${contextTheme}`}>
+                {texts.aboutNavItem3}
+              </span>
+            </div>
           </div>
         </div>
         <div className="about-table">
-          {activeTag === 1 && <JobTable />}
-          {activeTag === 2 && <EducationTable />}
-          {activeTag === 3 && <LanguageTable />}
+          {activeTag === 1 && <ExperienceTimeline />}
+          {activeTag === 2 && <EducationTimeline />}
+          {activeTag === 3 && <Languages />}
         </div>
       </div>
     </section>

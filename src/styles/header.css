@@ -77,7 +77,7 @@
 }
 
 .site-header.dark .header-logo-icon {
-  background-color: var(--dgreen-icon);
+  background-color: var(--dviolet-1);
 }
 
 .header-logo-text {
@@ -190,7 +190,7 @@
 
 .site-header.dark .header-language-toggle:hover {
   color: var(--dwhite-1);
-  background-color: var(--dhover-bg);
+  background-color: var(--violet-1);
 }
 
 .header-theme-toggle,
@@ -213,7 +213,7 @@
 .site-header.dark .header-theme-toggle:hover,
 .site-header.dark .header-mobile-toggle:hover {
   color: var(--dwhite-1);
-  background-color: var(--dhover-bg);
+  background-color: var(--violet-1);
 }
 
 @media (min-width: 768px) {

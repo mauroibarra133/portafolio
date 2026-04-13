@@ -8,6 +8,7 @@ export const LanguageContextProvider = ({ children }) => {
     es: {
       navItemHome: "Inicio",
       navItemAbout: "Sobre Mi",
+      aboutSubtitle: "Conoce más sobre mi trayectoria profesional, educación y habilidades",
       navItemProjects: "Proyectos",
       navItemSkills: "Tecnologias",
       navItemContact: "Contactame",
@@ -15,8 +16,12 @@ export const LanguageContextProvider = ({ children }) => {
       heroText: `Soy un desarrollador full-stack flexible centrado en 
       hacer que la tecnología sea fácil de usar. Con un enfoque animado 
       y orientado al equipo, estoy aquí para contribuir positivamente a proyectos y equipos.`,
-      heroButtonContactame: "Contáctame",
-      heroButtonCv: "Ver CV",
+      heroTitle: "Desarrollo software",
+      heroTitle2: "que impulsa tu negocio",
+      heroButtonContactame: "Hablemos de tu proyecto",
+      heroBadge: "Disponible para nuevos proyectos",
+      heroButtonCv: "Descargar CV",
+      heroFeaturedViewMore: "Ver más",
       aboutNavItem1: "Experiencia",
       aboutNavItem2: "Educacion",
       aboutNavItem3: "Idiomas",
@@ -38,6 +43,7 @@ export const LanguageContextProvider = ({ children }) => {
       skillsTitl1: "Tecnologias",
       skillsTitl2: "Frameworks",
       skillsTitl3: "Herramientas",
+      skillsLearning: "Y siempre aprendiendo nuevas tecnologías...",
       project1Name: "Website de Alares",
       project1Description:
         "Web diseñada para la gestión de un bar de Jesús Maria, donde se pueden realizar reservas, pedidos y administrar la carta de menús.",
@@ -63,6 +69,7 @@ export const LanguageContextProvider = ({ children }) => {
     en: {
       navItemHome: "Home",
       navItemAbout: "About Me",
+      aboutSubtitle: "Learn more about my professional background, education, and skills",
       navItemProjects: "Projects",
       navItemSkills: "Skills",
       navItemContact: "Contact Me",
@@ -70,8 +77,9 @@ export const LanguageContextProvider = ({ children }) => {
       heroText: `I'm a flexible full-stack developer with a focus on making technology
        user-friendly.Bringing a lively and team-oriented approach,
         I'm here to contribute positively to projects and teams.`,
-      heroButtonContactame: "Contact Me",
-      heroButtonCv: "Resume",
+      heroButtonContactame: "Let's talk about your project",
+      heroButtonCv: "Download CV",
+      heroFeaturedViewMore: "View More",
       aboutNavItem1: "Experience",
       aboutNavItem2: "Education",
       aboutNavItem3: "Languages",
@@ -93,6 +101,7 @@ export const LanguageContextProvider = ({ children }) => {
       skillsTitl1: "Tecnologies",
       skillsTitl2: "Frameworks",
       skillsTitl3: "Tools",
+      skillsLearning: "And always learning new technologies...",
       project1Name: "Alares Restaurant Website",
       project1Description:
         "A web made to a local restaurant thar enables to make online orders and administrate your local.",
