@@ -1,6 +1,6 @@
 import { ArrowRight, Download, Mail, ExternalLink } from "lucide-react";
-import githubIcon from "../assets/github-icon.png";
-import linkedinIcon from "../assets/linkedin-icon.png";
+import githubIcon from "../assets/skills/github-icon.webp";
+import linkedinIcon from "../assets/socialmedia/linkedin-icon.webp";
 import Button from "./ui/Button";
 import { Link } from "react-router-dom";
 import { useLanguageContext } from "../context/LanguageContext";

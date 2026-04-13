@@ -3,10 +3,10 @@ import { useLanguageContext } from "../context/LanguageContext.jsx";
 import "../styles/footer.css";
 import { Link } from "react-router-dom";
 
-import linkedinIcon from "../assets/linkedin-icon.png";
-import githubIcon from "../assets/github2-icon.png";
-import igIcon from "../assets/ig-icon.png";
-import wspIcon from "../assets/wsp-icon.png";
+import linkedinIcon from "../assets/socialmedia/linkedin-icon.webp";
+import githubIcon from "../assets/socialmedia/github2-icon.webp";
+import igIcon from "../assets/socialmedia/ig-icon.webp";
+import wspIcon from "../assets/socialmedia/wsp-icon.webp";
 
 import Copyright from "./Copyright.jsx";
 

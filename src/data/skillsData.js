@@ -1,18 +1,18 @@
-import htmlIcon from "../assets/html-icon.png";
-import cssIcon from "../assets/css-icon.png";
-import jsIcon from "../assets/js-icon.png";
-import pyIcon from "../assets/python-icon.png";
-import phpIcon from "../assets/php.svg";
-import reactIcon from "../assets/react-icon.png";
-import nodeIcon from "../assets/node-icon.png";
-import bsIcon from "../assets/bs-icon.png";
-import sassIcon from "../assets/sass-icon.png";
-import laravelIcon from "../assets/laravel.svg";
-import sqlServerIcon from "../assets/sql-server-icon.png";
-import viteIcon from "../assets/vite-icon.png";
-import githubIcon from "../assets/github-icon.png";
-import figmaIcon from "../assets/figma-icon.png";
-import dockerIcon from "../assets/docker.svg";
+import htmlIcon from "../assets/skills/html-icon.webp";
+import cssIcon from "../assets/skills/css-icon.webp";
+import jsIcon from "../assets/skills/js-icon.webp";
+import pyIcon from "../assets/skills/python-icon.webp";
+import phpIcon from "../assets/skills/php.svg";
+import reactIcon from "../assets/skills/react-icon.webp";
+import nodeIcon from "../assets/skills/node-icon.webp";
+import bsIcon from "../assets/skills/bs-icon.webp";
+import sassIcon from "../assets/skills/sass-icon.webp";
+import laravelIcon from "../assets/skills/laravel.svg";
+import sqlServerIcon from "../assets/skills/sql-server-icon.webp";
+import viteIcon from "../assets/skills/vite-icon.webp";
+import githubIcon from "../assets/skills/github-icon.webp";
+import figmaIcon from "../assets/skills/figma-icon.webp";
+import dockerIcon from "../assets/skills/docker.svg";
 
 export const skillsData = {
   languages: [
