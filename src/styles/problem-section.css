@@ -6,8 +6,8 @@
 }
 
 .problem-section.dark {
-  border-top-color: var(--dgreen-2);
-  background: linear-gradient(to bottom, transparent, rgba(66, 108, 91, 0.1));
+  border-top-color: var(--dviolet-1);
+  background: linear-gradient(to bottom, transparent, rgba(142, 148, 250, 0.1));
 }
 
 .problem-section.light {
@@ -184,11 +184,11 @@
 
 .problem-image-button.dark {
   background-color: var(--dblue-3);
-  border-color: var(--dgreen-2);
+  border-color: var(--dviolet-1);
 }
 
 .problem-image-button.dark:hover {
-  border-color: var(--dgreen-1);
+  border-color: var(--dviolet-2);
 }
 
 .problem-image-button.light {

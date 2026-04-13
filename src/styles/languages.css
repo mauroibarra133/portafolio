@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  align-items: center;
 }
 
 /* Language Card */
@@ -12,6 +13,7 @@
   background-color: var(--card);
   border: 1px solid rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
+  width: fit-content;
 }
 
 .language-card.dark {

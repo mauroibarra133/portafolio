@@ -10,7 +10,6 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  border-bottom: 1px solid var(--border-color, #e5e7eb);
   padding-bottom: 0.25rem;
   min-height: 48px;
 }
@@ -107,8 +106,8 @@
 }
 
 .feature-tab.dark.active {
-  background-color: var(--dgreen-1);
-  color: var(--dwhite-1);
+  background-color: var(--dhover-bg);
+  color: var(--dviolet-1);
 }
 
 .feature-tab.light.active {
@@ -150,7 +149,7 @@
 }
 
 .feature-video-area.dark {
-  background-color: var(--dgreen-2);
+  background-color: var(--dviolet-1);
 }
 
 .feature-video-area.light {
@@ -185,7 +184,7 @@
 }
 
 .play-icon.dark {
-  background-color: var(--dgreen-1);
+  background-color: var(--dviolet-1);
   color: var(--dwhite-1);
 }
 
@@ -288,7 +287,7 @@
 }
 
 .check-icon.dark {
-  background-color: var(--dgreen-1);
+  background-color: var(--dviolet-1);
   color: var(--dwhite-1);
 }
 

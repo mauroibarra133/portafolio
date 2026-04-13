@@ -13,7 +13,7 @@
 }
 
 .project-detail-header.dark {
-  border-bottom-color: var(--dgreen-2);
+  border-bottom-color: var(--dviolet-1);
 }
 
 .project-detail-header.light {
@@ -73,7 +73,7 @@
 }
 
 .project-detail-hero.dark {
-  border-bottom-color: var(--dgreen-2);
+  border-bottom-color: var(--dviolet-1);
 }
 
 .project-detail-hero.light {
@@ -161,7 +161,7 @@
 }
 
 .feature-count.dark {
-  background-color: var(--dgreen-1);
+  background-color: var(--dviolet-1);
   color: var(--dwhite-1);
 }
 
@@ -238,7 +238,7 @@
 }
 
 .project-detail-cta.dark {
-  border-top-color: var(--dgreen-2);
+  border-top-color: var(--dviolet-1);
 }
 
 .project-detail-cta.light {
@@ -293,12 +293,13 @@
 }
 
 .cta-button.dark {
-  background-color: var(--dgreen-1);
+  background-color: var(--dviolet-1);
   color: var(--dwhite-1);
 }
 
 .cta-button.dark:hover {
-  background-color: var(--dgreen-2);
+  background-color: var(--card-hoverbg);
+  border: 1px solid var(--dviolet-1);
 }
 
 .cta-button.light {
@@ -342,7 +343,7 @@
 }
 
 .project-detail-not-found.dark a {
-  background-color: var(--dgreen-1);
+  background-color: var(--dviolet-1);
   color: var(--dwhite-1);
 }
 
