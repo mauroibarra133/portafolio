@@ -8,6 +8,12 @@ import ultraseguridadIncidentesVideo from "../assets/ultraseguridad/features/ult
 import ultraseguridadReportesVideo from "../assets/ultraseguridad/features/ultraseguridad-reportes.mp4";
 import ultraseguridadReemplazosVideo from "../assets/ultraseguridad/features/ultraseguridad-reemplazos.mp4";
 import alaresProjectImage from "../assets/alares/alares-detail.webp";
+import alaresLandingVideo from "../assets/alares/alares-landing.mp4";
+import alaresCartaVideo from "../assets/alares/alares-carta.mp4";
+import alaresRankingVideo from "../assets/alares/alares-ranking.mp4";
+import alaresReservasVideo from "../assets/alares/alares-reservas.mp4";
+import alaresAdminVideo from "../assets/alares/alares-admin.mp4";
+import alaresLoginVideo from "../assets/alares/alares-login.mp4";
 
 export const projects = [
   {
@@ -127,6 +133,7 @@ export const projects = [
         id: "landing-page",
         name: "Landing Page",
         description: "Pagina de inicio moderna y atractiva para el restaurante. Presenta la identidad del local, menu destacado y llamada a la accion para reservar.",
+        videoUrl: alaresLandingVideo,
         highlights: [
           "Diseño responsive",
           "Galeria de platos",
@@ -138,6 +145,7 @@ export const projects = [
         id: "reservas",
         name: "Gestion de Reservas",
         description: "Sistema completo de reserva de mesas. Los clientes pueden seleccionar fecha, hora y cantidad de personas, con confirmacion automatica.",
+        videoUrl: alaresReservasVideo,
         highlights: [
           "Calendario interactivo",
           "Seleccion de hora y capacidad",
@@ -149,6 +157,7 @@ export const projects = [
         id: "carta",
         name: "Carta Digital",
         description: "Menu digital interactivo con categorias organizadas, imagenes de platos y precios actualizables. Facil navegacion desde cualquier dispositivo.",
+        videoUrl: alaresCartaVideo,
         highlights: [
           "Categorias organizadas",
           "Imagenes de platos",
@@ -156,21 +165,11 @@ export const projects = [
           "Precios actualizables"
         ]
       },
-      {
-        id: "pedidos",
-        name: "Gestion de Pedidos",
-        description: "Control completo de pedidos desde que se realizan hasta que se entregan. Estado en tiempo real y notificaciones al personal.",
-        highlights: [
-          "Seguimiento de pedidos",
-          "Notificaciones en tiempo real",
-          "Historial de ordenes",
-          "Reportes de ventas"
-        ]
-      },
-      {
+            {
         id: "administrador",
         name: "Panel Administrativo",
         description: "Dashboard completo para gestionar todos los aspectos del restaurante: reservas, pedidos, clientes y metricas de negocio.",
+        videoUrl: alaresAdminVideo,
         highlights: [
           "Metricas en tiempo real",
           "Gestion centralizada",
@@ -182,6 +181,7 @@ export const projects = [
         id: "ranking",
         name: "Ranking de Clientes",
         description: "Sistema de clasificacion de clientes basado en frecuencia de visitas, consumo promedio y valoraciones. Beneficios para clientes VIP.",
+        videoUrl: alaresRankingVideo,
         highlights: [
           "Puntos por consumo",
           "Niveles de membresia",
@@ -190,14 +190,16 @@ export const projects = [
         ]
       },
       {
-        id: "dudas",
-        name: "Gestion de Dudas",
-        description: "Sistema de atencion al cliente para consultas, quejas y sugerencias. Chat en vivo y formulario de contacto con respuesta rapida.",
+        id: "login",
+        name: "Login de Usuarios",
+        description: "Sistema de autenticacion con roles diferenciados para clientes, personal administrativo y gerentes. Control de accesos y permisos segun el tipo de usuario.",
+        videoUrl: alaresLoginVideo,
         highlights: [
-          "Chat en vivo",
-          "Formulario de contacto",
-          "Base de conocimientos",
-          "Seguimiento de tickets"
+          "Login por roles (Cliente, Staff, Admin)",
+          "Control de permisos por usuario",
+          "Sesiones seguras con JWT",
+          "Recuperacion de contraseña",
+          "Dashboard segun rol"
         ]
       }
     ]

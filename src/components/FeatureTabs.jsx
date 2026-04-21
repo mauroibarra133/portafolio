@@ -86,13 +86,13 @@ function FeatureTabs({ features, theme }) {
               controls
               className="feature-video"
             />
-          ) : activeFeature.image ? (
+          ) : activeFeature.imageUrl ? (
             <button
-              onClick={() => setSelectedImage(activeFeature.image)}
+              onClick={() => setSelectedImage(activeFeature.imageUrl)}
               className="feature-image-button"
             >
               <img
-                src={activeFeature.image}
+                src={activeFeature.imageUrl}
                 alt={activeFeature.name}
                 className="feature-video"
               />
