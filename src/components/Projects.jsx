@@ -84,7 +84,7 @@ function Projects() {
               onClick={() => goToPage(currentPage - 1)}
               disabled={currentPage === 1}
               className={`pagination-button ${contextTheme} ${currentPage === 1 ? 'disabled' : ''}`}
-              aria-label="Pagina anterior"
+              aria-label={texts.paginationPrevious}
             >
               ←
             </button>
@@ -105,7 +105,7 @@ function Projects() {
               onClick={() => goToPage(currentPage + 1)}
               disabled={currentPage === totalPages}
               className={`pagination-button ${contextTheme} ${currentPage === totalPages ? 'disabled' : ''}`}
-              aria-label="Pagina siguiente"
+              aria-label={texts.paginationNext}
             >
               →
             </button>
@@ -115,7 +115,7 @@ function Projects() {
         {/* Page indicator */}
         {totalPages > 1 && (
           <p className={`pagination-info ${contextTheme}`}>
-            Mostrando {startIndex + 1}-{Math.min(endIndex, reversedProjects.length)} de {reversedProjects.length} proyectos
+            {texts.paginationInfo.replace('{start}', startIndex + 1).replace('{end}', Math.min(endIndex, reversedProjects.length)).replace('{total}', reversedProjects.length)}
           </p>
         )}
       </div>

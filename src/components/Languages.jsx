@@ -7,7 +7,7 @@ import "../styles/languages.css";
 
 function Languages() {
   const { contextTheme } = useThemeContext();
-  const { texts } = useLanguageContext();
+  const { texts, language } = useLanguageContext();
 
   return (
     <div className="languages-section">
@@ -21,10 +21,12 @@ function Languages() {
               <div className={`language-card-icon ${contextTheme}`}>
                 <FontAwesomeIcon icon={faLanguage} className="h-5 w-5" />
               </div>
-              <h3 className={`language-card-title ${contextTheme}`}>{item.idioma}</h3>
+              <h3 className={`language-card-title ${contextTheme}`}>
+                {index === 0 ? (language === "es" ? texts.language1 : texts.language1) : (language === "es" ? texts.language2 : texts.language2)}
+              </h3>
             </div>
             <span className={`language-card-badge ${contextTheme}`}>
-              {item.nivel}
+              {index === 0 ? (language === "es" ? texts.lglLvl1 : texts.lglLvl1) : (language === "es" ? texts.lglLvl2 : texts.lglLvl2)}
             </span>
           </div>
 

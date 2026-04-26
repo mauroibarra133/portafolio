@@ -15,7 +15,7 @@ import "../styles/experience-timeline.css";
 
 function EducationTimeline() {
   const { contextTheme } = useThemeContext();
-  const { texts } = useLanguageContext();
+  const { texts, language } = useLanguageContext();
 
   return (
     <div className="experience-timeline">
@@ -37,19 +37,19 @@ function EducationTimeline() {
             <div className={`experience-card ${contextTheme}`}>
               {/* Header */}
               <div className="experience-card-header">
-                <div className="experience-card-header-left">
-                  <div className="experience-company">
-                    <h3 className={contextTheme}>{item.institucion}</h3>
+                <div className={`experience-company ${contextTheme}`}>
+                  <h3 className={contextTheme}>
+                    {language === "es" ? texts.educationInstitution1 : texts.educationInstitution2}
+                  </h3>
+                  <p className={`experience-role ${contextTheme}`}>
+                    {language === "es" ? texts.educationDegree1 : texts.educationDegree2}
                     {item.completed && (
                       <span
                         className={`experience-current-badge ${contextTheme}`}
                       >
-                        {item.estado}
+                        {language === "es" ? texts.educationGraduated1 : texts.educationGraduated2}
                       </span>
                     )}
-                  </div>
-                  <p className={`experience-role ${contextTheme}`}>
-                    {item.titulo}
                   </p>
                 </div>
 
@@ -75,7 +75,7 @@ function EducationTimeline() {
 
               {/* Description */}
               <p className={`experience-description ${contextTheme}`}>
-                {item.descripcion}
+                {language === "es" ? texts.educationDescription1 : texts.educationDescription2}
               </p>
             </div>
           </div>

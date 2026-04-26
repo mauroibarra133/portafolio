@@ -204,36 +204,7 @@ export const projects = [
       }
     ]
   },
-  {
-    slug: "la-estacion",
-    title: "La Estacion",
-    shortDescription: "Landing page moderna para restaurante con menu digital y sistema de reservas.",
-    fullDescription: "Sitio web responsive para restaurante La Estacion. Presenta el menu, permite reservas online y muestra la galeria del local.",
-    image: "/laestacion-preview.png",
-    features: [
-      {
-        id: "menu",
-        name: "Menu Digital",
-        description: "Menu interactivo con categorias, descripciones detalladas y precios actualizados. Facil de navegar en cualquier dispositivo.",
-        highlights: [
-          "Categorias organizadas",
-          "Imagenes de platos",
-          "Precios actualizables"
-        ]
-      },
-      {
-        id: "reservas",
-        name: "Sistema de Reservas",
-        description: "Formulario de reservas integrado que permite a los clientes reservar mesa seleccionando fecha, hora y cantidad de personas.",
-        highlights: [
-          "Seleccion de fecha y hora",
-          "Confirmacion por email",
-          "Gestion de disponibilidad"
-        ]
-      }
-    ]
-  },
-  {
+    {
     slug: "pomotimer",
     title: "Pomodoro Timer",
     shortDescription: "Aplicacion de productividad basada en la tecnica Pomodoro con temporizador y estadisticas.",

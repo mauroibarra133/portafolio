@@ -8,10 +8,10 @@ function Page() {
   return (
     <>
       <HeroSection></HeroSection>
-      <AboutMe></AboutMe>
-      <Projects></Projects>
-      <Skills></Skills>
-      <Footer></Footer>
+      <AboutMe id="aboutme"></AboutMe>
+      <Projects id="projects"></Projects>
+      <Skills id="skills"></Skills>
+      <Footer id="footer"></Footer>
 
     </>
   );

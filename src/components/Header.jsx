@@ -6,25 +6,39 @@ import { useLanguageContext } from "../context/LanguageContext";
 import Button from "./ui/Button";
 import "../styles/header.css";
 
-const navItems = [
-  { href: "/", label: "Inicio" },
-  { href: "/about", label: "Sobre Mi" },
-  { href: "/projects", label: "Proyectos" },
-  { href: "/skills", label: "Tecnologias" },
-  { href: "/contact", label: "Contacto" },
-];
-
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { contextTheme, toggleTheme } = useThemeContext();
-  const { language, toggleLanguage } = useLanguageContext();
+  const { language, toggleLanguage, texts } = useLanguageContext();
   const isDark = contextTheme === "dark";
+
+  const navItems = [
+    { href: "/", label: texts.navItemHome },
+    { href: "#aboutme", label: texts.navItemAbout },
+    { href: "#projects", label: texts.navItemProjects },
+    { href: "#skills", label: texts.navItemSkills },
+    { href: "#footer", label: texts.navItemContact },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
+
+    const handleNavClick = (href) => {
+      // Close mobile menu if open
+      setIsMobileMenuOpen(false);
+      
+      // Smooth scroll to section if it has hash
+      if (href.includes('#')) {
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -52,6 +66,7 @@ export default function Header() {
                 key={item.href}
                 to={item.href}
                 className="header-nav-link"
+                onClick={() => handleNavClick(item.href)}
               >
                 {item.label}
               </Link>

@@ -11,7 +11,7 @@ import "../styles/project-detail.css";
 function ProjectDetail() {
   const { slug } = useParams();
   const { contextTheme } = useThemeContext();
-  const { texts } = useLanguageContext();
+  const { texts, language } = useLanguageContext();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -20,11 +20,64 @@ function ProjectDetail() {
   
   const project = getProjectBySlug(slug);
 
+  // Get translated project data for UltraSeguridad and Alares
+  const getTranslatedProject = () => {
+    if (project.slug === 'ultraseguridad') {
+      return {
+        ...project,
+        title: language === 'es' ? texts.ultraseguridadTitle : texts.ultraseguridadTitle,
+        shortDescription: language === 'es' ? texts.ultraseguridadShortDescription : texts.ultraseguridadShortDescription,
+        fullDescription: language === 'es' ? texts.ultraseguridadFullDescription : texts.ultraseguridadFullDescription,
+        problemSection: {
+          title: language === 'es' ? texts.ultraseguridadProblemTitle : texts.ultraseguridadProblemTitle,
+          description: language === 'es' ? texts.ultraseguridadProblemDescription : texts.ultraseguridadProblemDescription,
+          images: project.problemSection?.images || []
+        },
+        features: project.features.map((feature, index) => ({
+          ...feature,
+          name: language === 'es' 
+            ? texts[`ultraseguridadFeature${index + 1}Name`]
+            : texts[`ultraseguridadFeature${index + 1}Name`],
+          description: language === 'es'
+            ? texts[`ultraseguridadFeature${index + 1}Description`]
+            : texts[`ultraseguridadFeature${index + 1}Description`]
+        }))
+      };
+    }
+    
+    if (project.slug === 'alares') {
+      return {
+        ...project,
+        title: language === 'es' ? texts.alaresTitle : texts.alaresTitle,
+        shortDescription: language === 'es' ? texts.alaresShortDescription : texts.alaresShortDescription,
+        fullDescription: language === 'es' ? texts.alaresFullDescription : texts.alaresFullDescription,
+        problemSection: {
+          title: language === 'es' ? texts.alaresProblemTitle : texts.alaresProblemTitle,
+          description: language === 'es' ? texts.alaresProblemDescription : texts.alaresProblemDescription,
+          images: project.problemSection?.images || []
+        },
+        features: project.features.map((feature, index) => ({
+          ...feature,
+          name: language === 'es' 
+            ? texts[`alaresFeature${index + 1}Name`]
+            : texts[`alaresFeature${index + 1}Name`],
+          description: language === 'es'
+            ? texts[`alaresFeature${index + 1}Description`]
+            : texts[`alaresFeature${index + 1}Description`]
+        }))
+      };
+    }
+    
+    return project;
+  };
+
+  const translatedProject = getTranslatedProject();
+
   if (!project) {
     return (
       <div className={`project-detail-not-found ${contextTheme}`}>
-        <h1>Proyecto no encontrado</h1>
-        <Link to="/#projects">Volver a proyectos</Link>
+        <h1>{language === 'es' ? 'Proyecto no encontrado' : 'Project not found'}</h1>
+        <Link to="/#projects">{language === 'es' ? 'Volver a proyectos' : 'Back to projects'}</Link>
       </div>
     );
   }
@@ -43,7 +96,7 @@ function ProjectDetail() {
             className={`back-button ${contextTheme}`}
           >
             <span className="back-arrow">←</span>
-            Volver a proyectos
+            {language === 'es' ? 'Volver a proyectos' : 'Back to projects'}
           </button>
         </div>
       </header>
@@ -53,19 +106,19 @@ function ProjectDetail() {
         <div className="container">
           <div className="hero-content">
             <div className={`hero-text ${contextTheme}`}>
-              <h1>{project.title}</h1>
-              <p>{project.fullDescription}</p>
+              <h1>{translatedProject.title}</h1>
+              <p>{translatedProject.fullDescription}</p>
               <div className="hero-meta">
                 <span className={`feature-count ${contextTheme}`}>
                   <Layers size={14} />
-                  {project.features.length} funcionalidades
+                  {translatedProject.features.length} {language === 'es' ? 'funcionalidades' : 'features'}
                 </span>
               </div>
             </div>
             <div className="hero-image">
               <img 
-                src={project.image} 
-                alt={project.title}
+                src={translatedProject.image} 
+                alt={translatedProject.title}
                 className="project-hero-img"
               />
             </div>
@@ -74,18 +127,18 @@ function ProjectDetail() {
       </section>
 
       {/* Problem Section - Only shown if exists */}
-      {project.problemSection && (
-        <ProblemSection problem={project.problemSection} theme={contextTheme} />
+      {translatedProject.problemSection && (
+        <ProblemSection problem={translatedProject.problemSection} theme={contextTheme} />
       )}
 
       {/* Features */}
       <section className={`project-detail-features ${contextTheme}`}>
         <div className="container">
           <div className={`features-header ${contextTheme}`}>
-            <h2>Funcionalidades</h2>
-            <p>Explora cada modulo y descubre que problemas resuelve</p>
+            <h2>{language === 'es' ? 'Funcionalidades' : 'Features'}</h2>
+            <p>{language === 'es' ? 'Explora cada modulo y descubre que problemas resuelve' : 'Explore each module and discover what problems it solves'}</p>
           </div>
-          <FeatureTabs features={project.features} theme={contextTheme} />
+          <FeatureTabs features={translatedProject.features} theme={contextTheme} />
         </div>
       </section>
 
@@ -93,10 +146,10 @@ function ProjectDetail() {
       <section className={`project-detail-cta ${contextTheme}`}>
         <div className="container">
           <div className={`cta-content ${contextTheme}`}>
-            <h3>Necesitas algo similar?</h3>
-            <p>Contactame para discutir tu proyecto</p>
+            <h3>{language === 'es' ? 'Necesitas algo similar?' : 'Need something similar?'}</h3>
+            <p>{language === 'es' ? 'Contactame para discutir tu proyecto' : 'Contact me to discuss your project'}</p>
             <Link to="/#contact" className={`cta-button ${contextTheme}`}>
-              Contactar
+              {language === 'es' ? 'Contactar' : 'Contact'}
             </Link>
           </div>
         </div>
